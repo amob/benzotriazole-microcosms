@@ -1,0 +1,9 @@
+image batch,date,imagename,pixlength,mm.length,"Plates 1-20.2 are in first day, 21.1-50.2 are on second",Length is from tip of b5 label dash to b4 label dash – eg.width of well plus 1 space between well
+StartFeb1314,feb13,DSC_1381_plate1.1.JPG,843,19.3,,
+StartFeb1314,feb14,DSC_1486_plate50.2.JPG,833,19.3,,
+Feb18.19,feb18,DSC_0278_plate50.2.JPG,752,19.3,,
+Feb18.19,feb18,DSC_0150_plate1.1.JPG,755,19.3,,
+Feb20.21,feb20,DSC_0279_plate1.1.JPG,752,19.3,,
+Feb20.21,feb21,DSC_0380_plate50.2.JPG,749,19.3,,
+End24.25,feb24,DSC_0495_plate1.1.JPG,527,19.3,,
+End24.25,feb25,DSC_0780_plate50.2.JPG,423,19.3,,

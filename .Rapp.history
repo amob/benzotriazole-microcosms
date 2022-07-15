@@ -1,0 +1,1272 @@
+tmpY <- MCMCglmm(conc_corrected~ Salt + Microbe +Salt:Microbe, random = ~ Genotype + idh(Salt):Genotype + idh(micrnum):Genotype  + idh(Salt:micrnum):Genotype  ,data=mixAAtrt,nitt=50000,verbose=F,pr=T)
+tmpY <- MCMCglmm(conc_corrected~ Salt + micrnum +Salt:micrnum, random = ~ Genotype + idh(Salt):Genotype + idh(micrnum):Genotype  + idh(Salt:micrnum):Genotype  ,data=mixAAtrt,nitt=50000,verbose=F,pr=T)
+summary(tmpY)
+summary(MCMCglmm(conc_corrected~ Salt + micrnum +Salt:micrnum, random = ~ Genotype + idh(Salt):Genotype + idh(micrnum):Genotype   ,data=mixAAtrt,nitt=50000,verbose=F,pr=T)
+)
+summary(MCMCglmm(conc_corrected~ Salt + micrnum , random = ~ Genotype + idh(Salt):Genotype + idh(micrnum):Genotype   ,data=mixAAtrt,nitt=50000,verbose=F,pr=T)   )
+summary(MCMCglmm(conc_corrected~ Salt + micrnum , random = ~ Genotype + idh(Salt):Genotype    ,data=mixAAtrt,nitt=50000,verbose=F,pr=T)   )
+summary(MCMCglmm(conc_corrected~ Salt + micrnum , random = ~ Genotype + idh(micrnum):Genotype    ,data=mixAAtrt,nitt=50000,verbose=F,pr=T)   )
+summary(MCMCglmm(conc_corrected~ Salt  , random = ~ Genotype + idh(Salt):Genotype    ,data=mixAAtrt,nitt=50000,verbose=F,pr=T)   )
+summary(MCMCglmm(conc_corrected~ Salt  , random = ~ Genotype     ,data=mixAAtrt,nitt=50000,verbose=F,pr=T)   )
+summary(MCMCglmm(conc_corrected~ Salt       ,data=mixAAtrt,nitt=50000,verbose=F,pr=T)   )
+summary(MCMCglmm(conc_corrected~ Salt + micrnum +Salt:micrnum, random = ~ Genotype + idh(Salt):Genotype + idh(micrnum):Genotype    ,data=mixAAtrt,nitt=50000,verbose=F,pr=T) )
+summary(tmpY)
+summary(MCMCglmm(conc_corrected~ Salt + micrnum +Salt:micrnum, random = ~ Genotype + idh(Salt):Genotype     ,data=mixAAtrt,nitt=50000,verbose=F,pr=T) )
+summary(MCMCglmm(conc_corrected~ Salt + micrnum +Salt:micrnum, random = ~ Genotype + idh(micrnum):Genotype     ,data=mixAAtrt,nitt=50000,verbose=F,pr=T) )
+summary(MCMCglmm(conc_corrected~ Salt + micrnum +Salt:micrnum, random = ~ Genotype + idh(Salt):Genotype     ,data=mixAAtrt,nitt=50000,verbose=F,pr=T) )
+summary(MCMCglmm(conc_corrected~ Salt + micrnum +Salt:micrnum, random = ~ Genotype + idh(micrnum):Genotype     ,data=mixAAtrt,nitt=50000,verbose=F,pr=T) )
+summary(tmpX)
+summary(tmpXa)
+summary(MCMCglmm(conc_corrected~ 1, random = ~ Genotype + idh(Salt):Genotype + idh(micrnum):Genotype + idh(Salt:Microbes):Genotype   ,data=mixAAtrt,nitt=150000,verbose=F))
+summary(MCMCglmm(conc_corrected~ 1, random = ~ Genotype + idh(Salt):Genotype + idh(micrnum):Genotype   ,data=mixAAtrt,nitt=150000,verbose=F))
+summary(MCMCglmm(conc_corrected~ 1, random = ~ Genotype + idh(Salt):Genotype + idh(micrnum):Genotype + idh(Salt:micrnum):Genotype   ,data=mixAAtrt,nitt=150000,verbose=F))
+summary(MCMCglmm(conc_corrected~ 1, random = ~ Genotype + idh(Salt):Genotype + idh(micrnum):Genotype + idh(Salt:micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(conc_corrected~ 1, random = ~ Genotype + idh(Salt):Genotype + idh(micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(conc_corrected~ 1, random = ~ Genotype + idh(Salt):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(conc_corrected~ 1, random = ~ Genotype + idh(micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(conc_corrected~ 1, random = ~ Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(conc_corrected~ 1    ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype + idh(micrnum):Genotype + idh(Salt:micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype + idh(micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F)) #this one would be selected#
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(BZTaplusBZTaa~ 1    ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype + idh(micrnum):Genotype + idh(Salt:micrnum):Genotype   ,data=mixAAtrt,nitt=750000,verbose=F))#
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype + idh(micrnum):Genotype   ,data=mixAAtrt,nitt=750000,verbose=F))#
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype    ,data=mixAAtrt,nitt=750000,verbose=F)) #
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(micrnum):Genotype   ,data=mixAAtrt,nitt=750000,verbose=F)) #
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype    ,data=mixAAtrt,nitt=750000,verbose=F))#
+summary(MCMCglmm(BZTaplusBZTaa~ 1    ,data=mixAAtrt,nitt=750000,verbose=F))
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(micrnum):Genotype   ,data=mixAAtrt,nitt=750000,verbose=F))
+summary(MCMCglmm(BZTaplusBZTaa~ micrnum, random = ~ Genotype + idh(micrnum):Genotype   ,data=mixAAtrt,nitt=50000,verbose=F))
+summary(MCMCglmm(glycosylatedBZT~ 1, random = ~ Genotype + idh(Salt):Genotype + idh(micrnum):Genotype + idh(Salt:micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(glycosylatedBZT~ 1, random = ~ Genotype + idh(Salt):Genotype + idh(micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(glycosylatedBZT~ 1, random = ~ Genotype + idh(Salt):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F)) #
+summary(MCMCglmm(glycosylatedBZT~ 1, random = ~ Genotype + idh(micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F)) #
+summary(MCMCglmm(glycosylatedBZT~ 1, random = ~ Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(glycosylatedBZT~ 1    ,data=mixAAtrt,nitt=250000,verbose=F))
+hier.phy3 <- hier.phy#
+	treegenus <- sapply(1:614,function(T) tail(unlist(strsplit(mastertax.s[ hier.phy$tip.label[T], 6 ],"g__",fixed=T)),1))#
+	treesp <- sapply(1:614,function(T) tail(unlist(strsplit(mastertax.s[ hier.phy$tip.label[T], 7],"s__",fixed=T)),1))#
+	treefam <- sapply(1:614,function(T) tail(unlist(strsplit(mastertax.s[ hier.phy$tip.label[T], 5],"f__",fixed=T)),1))#
+	treefam[treefam=="[Weeksellaceae]"] <- "Weeksellaceae"#
+	treefam[treefam=="[Exiguobacteraceae]"] <- "Exiguobacteraceae"#
+	treefam[treefam=="[Chromatiaceae]"] <- "Chromatiaceae"#
+	tiplabeldat <- data.frame(label = hier.phy3$tip.label, fam=treefam, genus = treegenus,#
+                species = treesp)#
+hier.phy3$edge.length[is.na(hier.phy3$edge.length)] <- 0#
+#collect some node numbers, names for pieces of the tree#
+allsigfamnodes <-  c("y151","y150","y74","y85","y48", #
+								"y27","y327","y55","y37",#
+								"y45","y44","y24","y30","y75","y31","y32",#
+								"y109","y47")#
+allsigfamnodeNames <- c("Aeromonadaceae","Enterobacteriaceae","Pseudomonadaceae","Rhizobiacae(broad)","Comamonadaceae(broad)", #
+							"Sphingobacteriaceae","Microbacteriaceae","Caulobacteriaceae","Bacillaceae(broad)",#
+						"Weeksellaceae","Flavobacteriaceae","Cytophagaceae","Moraxellaceae","Shewanellaceae","Rhodospirillaceae","Sphingomonadaceae",#
+						"Chromatiaceae","Xanthomonadaceae")#
+allfamnodeLs <- sapply(allsigfamnodes, function(z) which(hier.phy3$node.label == z) )#
+hier.phynodenams <- hier.phy3#
+hier.phynodenams$node.label[!(hier.phynodenams$node.label%in%allsigfamnodes)] <- "  "#
+hier.phynodenams$node.label[allfamnodeLs] <- allsigfamnodeNames#
+tiplabeldat$fam2 <- tiplabeldat$fam#
+tiplabeldat$fam2[is.na(tiplabeldat$fam2)] <- "NA"#
+tiplabeldat$fam2[tiplabeldat$fam2==""] <- "unk"#
+filldat <- data.frame(id= allfamnodeLs+614, type=allsigfamnodeNames)#
+#
+tipxout <- function(prdtrtmat, balances, tree ){ #prdtrtmat has rownames for products and colnames for genos#
+	ntip <- tree$Nnode + 1#
+	nnode <- tree$Nnode #
+	cormat <- sapply(1:nrow(prdtrtmat), function(z) cor(prdtrtmat[z,],t(balances)) )#
+	colnames(cormat) <- rownames(prdtrtmat)#
+	rownames(cormat) <- rownames(balances)#
+	balphycorprods99 <- lapply(1:ncol(cormat), function(corcol) #
+						which(abs(cormat[,corcol])>quantile(abs(cormat[,corcol]),0.95)))#
+	balphycorprods99tips <- lapply(1:ncol(cormat), function(corcol) #
+							lapply(names(balphycorprods99[[corcol]]), #
+								function(name) Descendants(tree,node= ntip + which(tree$node.label==name),type="tips") ))#
+	plotnodebalcorprods99 <- lapply(balphycorprods99, function(corlist) #
+			sapply(names(corlist) , function(z) which(tree$node.label==z) + ntip)	)#
+	nodeindexbalcorprods99 <- lapply(plotnodebalcorprods99,names)#
+	baltreeorder <- sapply(1:nnode, function(z) which(rownames(balances)==tree$node.label[z]))#
+	nodesout <- sapply(1:ncol(cormat), function(z)  abs(cormat[,z]) > quantile(abs(cormat[,z]),0.95)) #
+	tipsout <- lapply(1:ncol(nodesout), function(z) sapply(row.names(cormat)[which(nodesout[,z])],#
+										 function(name)  Descendants(tree, node= ntip + which(tree$node.label==name),type="tips" ) )  )#
+	tipisoutR <- sapply(1:length(tipsout), function(l) sapply(1:ntip, function(T) sum(unlist(tipsout[[l]]) ==T) ) )#
+	return(tipisoutR)#
+}#
+#
+maanss <-rbind(mixAAsaltm,mixAAnosaltm)#
+	rownames(maanss) <- c( colnames(mixAA), paste(colnames(mixAA),"_S",sep="")  )#
+tipisout <- tipxout(maanss,subbalphy,hier.phy)#
+ntipisout <- list()#
+for(i in 1:1000){#
+	nmaanss <- maanss[,sample(1:ncol(maanss),repl=F)]#
+	ntipisout[[i]] <-  tipxout(nmaanss,subbalphy,hier.phy)#
+}#
+reord <- lapply(1:ncol(tipisout), function(prd) sapply(1:length(ntipisout), function(n) ntipisout[[n]][,prd]) )#
+#
+int <- sapply(1:ncol(tipisout), function(p) sapply(1:nrow(tipisout),function(T) findInterval(tipisout[T,p],sort(reord[[p]][T,]) ,left.open=T )/length(reord[[p]][T,]) ) )#
+tipisoutpernode <- int#
+tipisoutpernode [tipisoutpernode<0.95] <- 0#
+reorderTO <- tipisout[,c(1,9,2,10,3,11,4,12,5,13,6,14,7,15,8,16)] #first is salt then without salt#
+row.names(reorderTO)<- hier.phy3$tip.label#
+reorderTOpn <- tipisoutpernode[,c(1,9,2,10,3,11,4,12,5,13,6,14,7,15,8,16)]#
+row.names(reorderTOpn)<- hier.phy3$tip.label#
+rotodf <- as.data.frame(reorderTO)#
+rotodfpn <- as.data.frame(reorderTOpn)#
+transfnames <- c("BZT","gly.BZT","BZTa+aa","aniline","amino3ph","phenanzine","mBZT","moxyBZT")#
+colnames(rotodf) <- c("BZT"," ","gly.BZT"," ","BZTa+aa"," ","aniline","aniline","amino3ph"," ","phenanzine"," ","mBZT"," ","moxyBZT"," ")#
+colnames(rotodfpn) <- c("BZT"," ","gly.BZT"," ","BZTa+aa"," ","aniline","aniline","amino3ph"," ","phenanzine"," ","mBZT"," ","moxyBZT"," ")#
+#transformation products balance plots
+dim(maans)
+dim(maanss)
+dim(subbalphy)
+str(subbalphy)
+head(subbalphy)
+subbalphy <- bal.phy[,colnames(bal.phy)%in%transf$Genotype]
+head(subbalphy)
+head(bal.phy)
+dim(bal.phy)
+transf$Genotype
+newcolnamesM
+feat.tab.qz 	<- read_qza("~/Lmb_deb_nostrep_sepkept_BZSandM_table_ff.qza")#filtered to both BZT and in the phylogeny (not sure how much this last filter tosses)	#
+feat.tax.qz 	<- read_qza("~/Lemna_microbiome_deblurtaxonomy_402.qza")##NOT FILTERED TO kept features, or even to rm streptophyta, so have to do that here#
+bal.phy.qz	<- read_qza("~/balances_tree_402_BZT.qza")$data#
+hier.phy 	<- read_qza("~/hierarchy_tree_402_BZT.qza")$data #
+bal.phy 	<- bal.phy.qz[,order(colnames(bal.phy.qz))] #
+feat.tab 	<- feat.tab.qz$data[,order(colnames(feat.tab.qz$data))] #
+feat.tax 	<- feat.tax.qz$data#
+#
+#make proportion:#
+feat.prop <- feat.tab#
+ftsums <- colSums(feat.tab)#
+for(i in 1:ncol(feat.tab)){feat.prop[,i] <- feat.prop[,i]/ftsums[i]}#
+#split tax info into columns#
+taxlevs <- sapply(1:nrow(feat.tax), function(z) strsplit(as.character(feat.tax$Taxon[z]),split="; "))#
+tax <- matrix(NA,ncol=7,nrow=nrow(feat.tax))#
+for(i in 1:nrow(tax)){ tax[i,1:length(taxlevs[[i]])]<- taxlevs[[i]]}#
+rownames(tax) <- as.character(feat.tax$Feature.ID)#
+mastertab.s <- feat.prop#
+mastertax.s <- tax[rownames(mastertab.s),]#
+#checks for chloroplast (of land plants, don't remove chloroplast of microbes!) and mitochondria#
+length(which(mastertax.s[,4]=="o__Streptophtya")) #if there were any of these, that would indicate land plants#
+length(which(mastertax.s[,3]=="c__Chloroplast")) #these contain many things we want! diatoms, single-celled algae. #
+#these would all be a problem. (no easy option to separate fungi from Lemna minor/animal contaminants -- insects in frozen samples, possibly also human who extracted samples)#
+length(which(mastertax.s[,5]=="f__mitochondria"))#
+length(which(mastertax.s[,5]=="f__mitochondria"))#
+##read sample info, and sort accordingly#
+sampleinfo 		<- read.csv("~/Dropbox/salt BT round 2/Lemna_microbiome_barebones_meta_inbzt2_wkmcC.tsv",header=T, stringsAsFactors=F)
+colnames(masterab.s)
+colnames(mastertab.s)
+sampleinfo$bzs2
+sampleinfo
+sampleinfo 		<- read.csv("~/Dropbox/salt BT round 2/Lemna_microbiome_barebones_meta_inbzt2_wkmcC.tsv",sep="\t",header=T, stringsAsFactors=F) #
+newcolnamesM <- sapply(colnames(mastertab.s), function(x) sampleinfo$bzs2[sampleinfo$sample.id==x])
+newcolnamesM
+colnames(mastertab.s)<- newcolnamesM#
+colnames(bal.phy) <- newcolnamesM#
+#biological measurements#
+biodat <- read.csv("~/Dropbox/salt BT round 2/biodat",header=T)#
+#
+#bzt transf data#
+transf <- read.csv("~/Dropbox/salt BT round 2/BZS2_transformation.csv",stringsAsFactors=F,header=T)#
+transf$Genotype[transf$Genotype=="Cnp"] <- "CnP" #to match other files#
+table(transf$Genotype)#
+#
+expAtransf.1 <- read.csv("~/Dropbox/salt BT round 2/experiment A products.csv",stringsAsFactors=F,header=T)#
+#from the first experiment:#
+#create identifiers to merge datasets#
+arabicplate <- as.numeric(sapply(1:nrow(biodat), function(z) strsplit(biodat$plate[z],"[.]")[[1]][1]))#
+splitpair <- sapply(1:nrow(biodat), function(z) strsplit(biodat$plate[z],"[.]")[[1]][2]) #
+arabicpair <- ifelse(splitpair=="I",1,2)#
+same_sampleid <- paste(arabicplate,arabicpair,paste(biodat$row,biodat$column,sep=""),sep=".")#
+# subset#
+subbio <- biodat[biodat$genotype%in%transf$Genotype,]#
+subbioexact <- t(sapply(1:length(transf$id), function(id) biodat[which(same_sampleid == transf$id[id]),]))#
+#sorted idenically to transf object#
+subbioexactdf <- data.frame(matrix(ncol=ncol(biodat),nrow=nrow(transf)))#
+for(i in 1:ncol(biodat)){#
+	subbioexactdf[,i] <- unlist(subbioexact[,i])#
+}#
+colnames(subbioexactdf) <- colnames(biodat)#
+#
+#genotyp biomeans by trts#
+biogenotrt <- sapply(sort(unique(biodat$genotype)), function(g) sapply(c(9:16,18:28,42), function(p) tapply(biodat[biodat$genotype==g,p],paste(biodat$BZT,biodat$Salt,biodat$microbe)[biodat$genotype==g],mean,na.rm=T) )) #
+#trtmnt order is all 0 bzt before all + bzt; then all 0 s before + s, then all - before +, so 0 0 -; 0 0 +, 0S - ....#
+#traits are grouped in rows first 8 rows are x0.FN, order is x0.FN through x10.FN, od600 od750, then all imageJ columns (area, perim, mean...) #
+#
+#now subset inocula abundance data to only the genotypes for which there are transformation products#
+submastertab <- mastertab.s[,colnames(mastertab.s)%in%transf$Genotype]#
+	submastertab.s <- submastertab[-(which(rowSums(submastertab) ==0)),]#
+	submastertax <- mastertax.s[rownames(submastertab.s),]#
+subbalphy <- bal.phy[,colnames(bal.phy)%in%transf$Genotype]#
+#
+#get transformation products matrix by genotype, transform via log when appropriate#
+products <- transf[,c(11,16:23)]#
+productsAA <- cbind(transf[,c(11,17)], rowSums(transf[,c(16,18)]), transf[,19:23])#
+colnames(productsAA) <- c( colnames(transf)[c(11,17)],"BZTa+BZTaa" , colnames(transf)[19:23] )#
+logprodsAA <- sapply(1:ncol(productsAA), function(x) log(productsAA[,x] + min(productsAA[productsAA[,x]>0,x])))#
+colnames(logprodsAA) <- colnames(productsAA)#
+chooselogprodsAA <- sapply(1:ncol(productsAA), function(z) shapiro.test(productsAA[,z])$statistic < 0.7 & shapiro.test(logprodsAA[,z])$statistic > shapiro.test(productsAA[,z])$statistic )#
+mixAA <- productsAA#
+mixAA[,which(chooselogprodsAA)] <- logprodsAA[,chooselogprodsAA]#
+mixAAtrt <- cbind(Genotype=transf$Genotype, Salt=transf$Salt, Microbes = transf$Microbes, rddens =transf$density, km= transf$km, mixAA)#
+colnames(mixAAtrt)[colnames(mixAAtrt)=="BZTa+BZTaa"] <- "BZTaplusBZTaa"#
+mixAAtrt$OD600 <- subbioexactdf$od_dat.od600#
+mixAAtrt$deltapix <- subbioexactdf$deltapix#
+mixAAtrtbio <- mixAAtrt[!is.na(mixAAtrt$OD600),]#
+mixAAtrt$micrnum <- as.numeric(as.factor(mixAAtrt$Microbes))-1 #for variance models
+mixAAsaltm <- sapply(sort(unique(transf$Genotype)), function(g) sapply(1:ncol(mixAA), function(p) mean(mixAA[transf$Genotype==g & transf$Salt=="0.8" &  transf$Microbes=="Yes",p],na.rm=T) ))#
+mixAAnosaltm <- sapply(sort(unique(transf$Genotype)), function(g) sapply(1:ncol(mixAA), function(p) mean(mixAA[transf$Genotype==g & transf$Salt=="0" &  transf$Microbes=="Yes",p],na.rm=T)))#
+mixAAsaltn <- sapply(sort(unique(transf$Genotype)), function(g) sapply(1:ncol(mixAA), function(p) mean(mixAA[transf$Genotype==g & transf$Salt=="0.8" &  transf$Microbes=="No",p],na.rm=T) ))#
+mixAAnosaltn <- sapply(sort(unique(transf$Genotype)), function(g) sapply(1:ncol(mixAA), function(p) mean(mixAA[transf$Genotype==g & transf$Salt=="0" &  transf$Microbes=="No",p],na.rm=T)))#
+	mixAAdens		<- sapply(sort(unique(transf$Genotype)), function(g) mean(transf$density[transf$Genotype==g],na.rm=T))#
+	mixAAkmC	<- sapply(sort(unique(transf$Genotype)), function(g) mean(transf$km[transf$Genotype==g],na.rm=T))#
+#
+#nanomoles#
+productsAAnm <- productsAA#
+productsAAnm[,2:8] <- productsAA[,2:8]*10e09#
+NLmixAAsaltm <- sapply(sort(unique(transf$Genotype)), function(g) sapply(1:ncol(mixAA), function(p) mean(productsAAnm[transf$Genotype==g & transf$Salt=="0.8" &  transf$Microbes=="Yes",p],na.rm=T) ))#
+NLmixAAnosaltm <- sapply(sort(unique(transf$Genotype)), function(g) sapply(1:ncol(mixAA), function(p) mean(productsAAnm[transf$Genotype==g & transf$Salt=="0" &  transf$Microbes=="Yes",p],na.rm=T)))#
+NLmixAAsaltn <- sapply(sort(unique(transf$Genotype)), function(g) sapply(1:ncol(mixAA), function(p) mean(productsAAnm[transf$Genotype==g & transf$Salt=="0.8" &  transf$Microbes=="No",p],na.rm=T) ))#
+NLmixAAnosaltn <- sapply(sort(unique(transf$Genotype)), function(g) sapply(1:ncol(mixAA), function(p) mean(productsAAnm[transf$Genotype==g & transf$Salt=="0" &  transf$Microbes=="No",p],na.rm=T)))
+dim(subbalphy)
+hier.phy3 <- hier.phy#
+	treegenus <- sapply(1:614,function(T) tail(unlist(strsplit(mastertax.s[ hier.phy$tip.label[T], 6 ],"g__",fixed=T)),1))#
+	treesp <- sapply(1:614,function(T) tail(unlist(strsplit(mastertax.s[ hier.phy$tip.label[T], 7],"s__",fixed=T)),1))#
+	treefam <- sapply(1:614,function(T) tail(unlist(strsplit(mastertax.s[ hier.phy$tip.label[T], 5],"f__",fixed=T)),1))#
+	treefam[treefam=="[Weeksellaceae]"] <- "Weeksellaceae"#
+	treefam[treefam=="[Exiguobacteraceae]"] <- "Exiguobacteraceae"#
+	treefam[treefam=="[Chromatiaceae]"] <- "Chromatiaceae"#
+	tiplabeldat <- data.frame(label = hier.phy3$tip.label, fam=treefam, genus = treegenus,#
+                species = treesp)#
+hier.phy3$edge.length[is.na(hier.phy3$edge.length)] <- 0#
+#collect some node numbers, names for pieces of the tree#
+allsigfamnodes <-  c("y151","y150","y74","y85","y48", #
+								"y27","y327","y55","y37",#
+								"y45","y44","y24","y30","y75","y31","y32",#
+								"y109","y47")#
+allsigfamnodeNames <- c("Aeromonadaceae","Enterobacteriaceae","Pseudomonadaceae","Rhizobiacae(broad)","Comamonadaceae(broad)", #
+							"Sphingobacteriaceae","Microbacteriaceae","Caulobacteriaceae","Bacillaceae(broad)",#
+						"Weeksellaceae","Flavobacteriaceae","Cytophagaceae","Moraxellaceae","Shewanellaceae","Rhodospirillaceae","Sphingomonadaceae",#
+						"Chromatiaceae","Xanthomonadaceae")#
+allfamnodeLs <- sapply(allsigfamnodes, function(z) which(hier.phy3$node.label == z) )#
+hier.phynodenams <- hier.phy3#
+hier.phynodenams$node.label[!(hier.phynodenams$node.label%in%allsigfamnodes)] <- "  "#
+hier.phynodenams$node.label[allfamnodeLs] <- allsigfamnodeNames#
+tiplabeldat$fam2 <- tiplabeldat$fam#
+tiplabeldat$fam2[is.na(tiplabeldat$fam2)] <- "NA"#
+tiplabeldat$fam2[tiplabeldat$fam2==""] <- "unk"#
+filldat <- data.frame(id= allfamnodeLs+614, type=allsigfamnodeNames)#
+#
+tipxout <- function(prdtrtmat, balances, tree ){ #prdtrtmat has rownames for products and colnames for genos#
+	ntip <- tree$Nnode + 1#
+	nnode <- tree$Nnode #
+	cormat <- sapply(1:nrow(prdtrtmat), function(z) cor(prdtrtmat[z,],t(balances)) )#
+	colnames(cormat) <- rownames(prdtrtmat)#
+	rownames(cormat) <- rownames(balances)#
+	balphycorprods99 <- lapply(1:ncol(cormat), function(corcol) #
+						which(abs(cormat[,corcol])>quantile(abs(cormat[,corcol]),0.95)))#
+	balphycorprods99tips <- lapply(1:ncol(cormat), function(corcol) #
+							lapply(names(balphycorprods99[[corcol]]), #
+								function(name) Descendants(tree,node= ntip + which(tree$node.label==name),type="tips") ))#
+	plotnodebalcorprods99 <- lapply(balphycorprods99, function(corlist) #
+			sapply(names(corlist) , function(z) which(tree$node.label==z) + ntip)	)#
+	nodeindexbalcorprods99 <- lapply(plotnodebalcorprods99,names)#
+	baltreeorder <- sapply(1:nnode, function(z) which(rownames(balances)==tree$node.label[z]))#
+	nodesout <- sapply(1:ncol(cormat), function(z)  abs(cormat[,z]) > quantile(abs(cormat[,z]),0.95)) #
+	tipsout <- lapply(1:ncol(nodesout), function(z) sapply(row.names(cormat)[which(nodesout[,z])],#
+										 function(name)  Descendants(tree, node= ntip + which(tree$node.label==name),type="tips" ) )  )#
+	tipisoutR <- sapply(1:length(tipsout), function(l) sapply(1:ntip, function(T) sum(unlist(tipsout[[l]]) ==T) ) )#
+	return(tipisoutR)#
+}#
+#
+maanss <-rbind(mixAAsaltm,mixAAnosaltm)#
+	rownames(maanss) <- c( colnames(mixAA), paste(colnames(mixAA),"_S",sep="")  )#
+tipisout <- tipxout(maanss,subbalphy,hier.phy)#
+ntipisout <- list()#
+for(i in 1:1000){#
+	nmaanss <- maanss[,sample(1:ncol(maanss),repl=F)]#
+	ntipisout[[i]] <-  tipxout(nmaanss,subbalphy,hier.phy)#
+}#
+reord <- lapply(1:ncol(tipisout), function(prd) sapply(1:length(ntipisout), function(n) ntipisout[[n]][,prd]) )#
+#
+int <- sapply(1:ncol(tipisout), function(p) sapply(1:nrow(tipisout),function(T) findInterval(tipisout[T,p],sort(reord[[p]][T,]) ,left.open=T )/length(reord[[p]][T,]) ) )#
+tipisoutpernode <- int#
+tipisoutpernode [tipisoutpernode<0.95] <- 0#
+reorderTO <- tipisout[,c(1,9,2,10,3,11,4,12,5,13,6,14,7,15,8,16)] #first is salt then without salt#
+row.names(reorderTO)<- hier.phy3$tip.label#
+reorderTOpn <- tipisoutpernode[,c(1,9,2,10,3,11,4,12,5,13,6,14,7,15,8,16)]#
+row.names(reorderTOpn)<- hier.phy3$tip.label#
+rotodf <- as.data.frame(reorderTO)#
+rotodfpn <- as.data.frame(reorderTOpn)#
+transfnames <- c("BZT","gly.BZT","BZTa+aa","aniline","amino3ph","phenanzine","mBZT","moxyBZT")#
+colnames(rotodf) <- c("BZT"," ","gly.BZT"," ","BZTa+aa"," ","aniline","aniline","amino3ph"," ","phenanzine"," ","mBZT"," ","moxyBZT"," ")#
+colnames(rotodfpn) <- c("BZT"," ","gly.BZT"," ","BZTa+aa"," ","aniline","aniline","amino3ph"," ","phenanzine"," ","mBZT"," ","moxyBZT"," ")
+colnames(rotodf) <- c("BZT"," ","gly.BZT"," ","BZTa+aa"," ","aniline","","amino3ph"," ","phenanzine"," ","mBZT"," ","moxyBZT"," ")#
+colnames(rotodfpn) <- c("BZT"," ","gly.BZT"," ","BZTa+aa"," ","aniline","","amino3ph"," ","phenanzine"," ","mBZT"," ","moxyBZT"," ")
+pdf("~/Dropbox/salt BT round 2/testggtreeheatv3interval_monly_alltransf.pdf",width=9,height=10)#
+gtree <- ggtree(hier.phynodenams,ladderize=F,color="gray") + geom_hilight(data=filldat, mapping=aes(node=id, fill=type,extend=6),show.legend=FALSE)  + geom_nodelab()#
+p <- gtree + new_scale_fill()#
+p1 <- gheatmap(p, rotodfpn[,c(1:2)],  high=rgb(.8,.8,0),low="gray",offset=0, width=.1,#)#. , #,#
+              colnames_angle=90, colnames_offset_y = 17)#
+p2 <- p1 + new_scale_fill()#
+p2 <-gheatmap(p2, rotodfpn[,c(3:4)], offset=0.075, width=.1,#
+         colnames_angle=90, colnames_offset_y = 20 ,  high=rgb(.75,0,0),low="gray",legend_title="interval") #
+p3 <-gheatmap(p2, rotodfpn[,c(5:6)], offset=0.15, width=.1,#
+         colnames_angle=90, colnames_offset_y = 20 ,  high=rgb(0.75,0,0),low="gray",legend_title="interval") #
+p4 <- p3 + new_scale_fill()#
+p4 <-gheatmap(p4, rotodfpn[,c(13:14)], offset=0.225, width=.1,#
+         colnames_angle=90, colnames_offset_y = 13)#
+p5 <-gheatmap(p4, rotodfpn[,c(15:16)], offset=0.3, width=.1,#
+         colnames_angle=90, colnames_offset_y = 21,  high=rgb(0.75,0,0.75),low="gray",legend_title="interval") #
+p6 <- p5 + new_scale_fill()#
+p6 <- gheatmap(p6, rotodfpn[,c(7:8)], offset=0.375, width=.1,#
+         colnames_angle=90, colnames_offset_y = 21,  high=rgb(0,0,1),low="gray") #
+p7 <- gheatmap(p6, rotodfpn[,c(9:10)], offset=0.45, width=.1,#
+         colnames_angle=90, colnames_offset_y = 25,  high=rgb(0,0,0.75),low="gray",legend_title="interval") #
+p8 <- gheatmap(p7, rotodfpn[,c(11:12)], offset=0.525, width=.1,#
+         colnames_angle=90, colnames_offset_y = 25,  high=rgb(0,0,0.75),low="gray",legend_title="interval") #
+#
+p8#
+dev.off()
+colnames(rotodf) <- c("BZT"," ","gly.BZT"," ","BZTa+aa"," ","aniline"," ","amino3ph"," ","phenanzine"," ","mBZT"," ","moxyBZT"," ")#
+colnames(rotodfpn) <- c("BZT"," ","gly.BZT"," ","BZTa+aa"," ","aniline"," ","amino3ph"," ","phenanzine"," ","mBZT"," ","moxyBZT"," ")
+pdf("~/Dropbox/salt BT round 2/testggtreeheatv3interval_monly_alltransf.pdf",width=9,height=10)#
+gtree <- ggtree(hier.phynodenams,ladderize=F,color="gray") + geom_hilight(data=filldat, mapping=aes(node=id, fill=type,extend=6),show.legend=FALSE)  + geom_nodelab()#
+p <- gtree + new_scale_fill()#
+p1 <- gheatmap(p, rotodfpn[,c(1:2)],  high=rgb(.8,.4,0),low="gray",offset=0, width=.1,#)#. , #,#
+              colnames_angle=90, colnames_offset_y = 17, legend_title="interval")#
+p2 <- p1 + new_scale_fill()#
+p2 <-gheatmap(p2, rotodfpn[,c(3:4)], offset=0.075, width=.1,#
+         colnames_angle=90, colnames_offset_y = 20 ,  high=rgb(.75,0,0),low="gray",legend_title="interval") #
+p3 <-gheatmap(p2, rotodfpn[,c(5:6)], offset=0.15, width=.1,#
+         colnames_angle=90, colnames_offset_y = 20 ,  high=rgb(0.75,0,0),low="gray",legend_title="interval") #
+p4 <- p3 + new_scale_fill()#
+p4 <-gheatmap(p4, rotodfpn[,c(13:14)], offset=0.225, width=.1,#
+         colnames_angle=90, colnames_offset_y = 13)#
+p5 <-gheatmap(p4, rotodfpn[,c(15:16)], offset=0.3, width=.1,#
+         colnames_angle=90, colnames_offset_y = 21,  high=rgb(0.75,0,0.75),low="gray",legend_title="interval") #
+p6 <- p5 + new_scale_fill()#
+p6 <- gheatmap(p6, rotodfpn[,c(7:8)], offset=0.375, width=.1,#
+         colnames_angle=90, colnames_offset_y = 21,  high=rgb(0,0,1),low="gray") #
+p7 <- gheatmap(p6, rotodfpn[,c(9:10)], offset=0.45, width=.1,#
+         colnames_angle=90, colnames_offset_y = 25,  high=rgb(0,0,0.75),low="gray",legend_title="interval") #
+p8 <- gheatmap(p7, rotodfpn[,c(11:12)], offset=0.525, width=.1,#
+         colnames_angle=90, colnames_offset_y = 25,  high=rgb(0,0,0.75),low="gray",legend_title="interval") #
+p8#
+dev.off()
+pdf("~/Dropbox/salt BT round 2/testggtreeheatv3interval_monly_alltransf.pdf",width=9,height=10)#
+gtree <- ggtree(hier.phynodenams,ladderize=F,color="gray") + geom_hilight(data=filldat, mapping=aes(node=id, fill=type,extend=6),show.legend=FALSE)  + geom_nodelab()#
+p <- gtree + new_scale_fill()#
+p1 <- gheatmap(p, rotodfpn[,c(1:2)],  high=rgb(0,0,0),low="gray",offset=0, width=.1,#)#. , #,#
+              colnames_angle=90, colnames_offset_y = 14, legend_title="interval")#
+p2 <- p1 + new_scale_fill()#
+p2 <-gheatmap(p2, rotodfpn[,c(3:4)], offset=0.075, width=.1,#
+         colnames_angle=90, colnames_offset_y = 20 ,  high=rgb(.75,0,0),low="gray",legend_title="interval") #
+p3 <-gheatmap(p2, rotodfpn[,c(5:6)], offset=0.15, width=.1,#
+         colnames_angle=90, colnames_offset_y = 20 ,  high=rgb(0.75,0,0),low="gray",legend_title="interval") #
+p4 <- p3 + new_scale_fill()#
+p4 <-gheatmap(p4, rotodfpn[,c(13:14)], offset=0.225, width=.1,#
+         colnames_angle=90, colnames_offset_y = 13)#
+p5 <-gheatmap(p4, rotodfpn[,c(15:16)], offset=0.3, width=.1,#
+         colnames_angle=90, colnames_offset_y = 21,  high=rgb(0.75,0,0.75),low="gray",legend_title="interval") #
+p6 <- p5 + new_scale_fill()#
+p6 <- gheatmap(p6, rotodfpn[,c(7:8)], offset=0.375, width=.1,#
+         colnames_angle=90, colnames_offset_y = 19,  high=rgb(0,0,1),low="gray") #
+p7 <- gheatmap(p6, rotodfpn[,c(9:10)], offset=0.45, width=.1,#
+         colnames_angle=90, colnames_offset_y = 25,  high=rgb(0,0,0.75),low="gray",legend_title="interval") #
+p8 <- gheatmap(p7, rotodfpn[,c(11:12)], offset=0.525, width=.1,#
+         colnames_angle=90, colnames_offset_y = 25,  high=rgb(0,0,0.75),low="gray",legend_title="interval") #
+p8#
+dev.off()
+pdf("~/Dropbox/salt BT round 2/testggtreeheatv3interval_monly_alltransf.pdf",width=9,height=10)#
+gtree <- ggtree(hier.phynodenams,ladderize=F,color="gray") + geom_hilight(data=filldat, mapping=aes(node=id, fill=type,extend=6),show.legend=FALSE)  + geom_nodelab()#
+p <- gtree + new_scale_fill()#
+p1 <- gheatmap(p, rotodfpn[,c(1:2)],  high=rgb(0,0,0),low="gray",offset=0, width=.1,#)#. , #,#
+              colnames_angle=90, colnames_offset_y = 12, legend_title="interval")#
+p2 <- p1 + new_scale_fill()#
+p2 <-gheatmap(p2, rotodfpn[,c(3:4)], offset=0.075, width=.1,#
+         colnames_angle=90, colnames_offset_y = 20 ,  high=rgb(.75,0,0),low="gray",legend_title="interval") #
+p3 <-gheatmap(p2, rotodfpn[,c(5:6)], offset=0.15, width=.1,#
+         colnames_angle=90, colnames_offset_y = 20 ,  high=rgb(0.75,0,0),low="gray",legend_title="interval") #
+p4 <- p3 + new_scale_fill()#
+p4 <-gheatmap(p4, rotodfpn[,c(13:14)], offset=0.225, width=.1,#
+         colnames_angle=90, colnames_offset_y = 13)#
+p5 <-gheatmap(p4, rotodfpn[,c(15:16)], offset=0.3, width=.1,#
+         colnames_angle=90, colnames_offset_y = 21,  high=rgb(0.75,0,0.75),low="gray",legend_title="interval") #
+p6 <- p5 + new_scale_fill()#
+p6 <- gheatmap(p6, rotodfpn[,c(7:8)], offset=0.375, width=.1,#
+         colnames_angle=90, colnames_offset_y = 17,  high=rgb(0,0,1),low="gray") #
+p7 <- gheatmap(p6, rotodfpn[,c(9:10)], offset=0.45, width=.1,#
+         colnames_angle=90, colnames_offset_y = 25,  high=rgb(0,0,0.75),low="gray",legend_title="interval") #
+p8 <- gheatmap(p7, rotodfpn[,c(11:12)], offset=0.525, width=.1,#
+         colnames_angle=90, colnames_offset_y = 25,  high=rgb(0,0,0.75),low="gray",legend_title="interval") #
+p8#
+dev.off()
+tipisoutpernode <- int#
+tipisoutpernode9 <- int#
+tipisoutpernode [tipisoutpernode<0.95] <- 0#
+tipisoutpernode9 [tipisoutpernode9<0.9] <- 0#
+reorderTO <- tipisout[,c(1,9,2,10,3,11,4,12,5,13,6,14,7,15,8,16)] #first is salt then without salt#
+row.names(reorderTO)<- hier.phy3$tip.label#
+reorderTOpn <- tipisoutpernode[,c(1,9,2,10,3,11,4,12,5,13,6,14,7,15,8,16)]#
+reorderTOpn9 <- tipisoutpernode9[,c(1,9,2,10,3,11,4,12,5,13,6,14,7,15,8,16)]#
+row.names(reorderTOpn)<- hier.phy3$tip.label#
+row.names(reorderTOpn9)<- hier.phy3$tip.label#
+rotodf <- as.data.frame(reorderTO)#
+rotodfpn <- as.data.frame(reorderTOpn)#
+rotodfpn9 <- as.data.frame(reorderTOpn9)
+pdf("~/Dropbox/salt BT round 2/testggtreeheatv3interval_monly_alltransf9.pdf",width=9,height=10)#
+gtree <- ggtree(hier.phynodenams,ladderize=F,color="gray") + geom_hilight(data=filldat, mapping=aes(node=id, fill=type,extend=6),show.legend=FALSE)  + geom_nodelab()#
+p <- gtree + new_scale_fill()#
+p1 <- gheatmap(p, rotodfpn9[,c(1:2)],  high=rgb(0,0,0),low="gray",offset=0, width=.1,#)#. , #,#
+              colnames_angle=90, colnames_offset_y = 12, legend_title="interval")#
+p2 <- p1 + new_scale_fill()#
+p2 <-gheatmap(p2, rotodfpn9[,c(3:4)], offset=0.075, width=.1,#
+         colnames_angle=90, colnames_offset_y = 20 ,  high=rgb(.75,0,0),low="gray",legend_title="interval") #
+p3 <-gheatmap(p2, rotodfpn9[,c(5:6)], offset=0.15, width=.1,#
+         colnames_angle=90, colnames_offset_y = 20 ,  high=rgb(0.75,0,0),low="gray",legend_title="interval") #
+p4 <- p3 + new_scale_fill()#
+p4 <-gheatmap(p4, rotodfpn9[,c(13:14)], offset=0.225, width=.1,#
+         colnames_angle=90, colnames_offset_y = 13)#
+p5 <-gheatmap(p4, rotodfpn9[,c(15:16)], offset=0.3, width=.1,#
+         colnames_angle=90, colnames_offset_y = 21,  high=rgb(0.75,0,0.75),low="gray",legend_title="interval") #
+p6 <- p5 + new_scale_fill()#
+p6 <- gheatmap(p6, rotodfpn9[,c(7:8)], offset=0.375, width=.1,#
+         colnames_angle=90, colnames_offset_y = 17,  high=rgb(0,0,1),low="gray") #
+p7 <- gheatmap(p6, rotodfpn9[,c(9:10)], offset=0.45, width=.1,#
+         colnames_angle=90, colnames_offset_y = 25,  high=rgb(0,0,0.75),low="gray",legend_title="interval") #
+p8 <- gheatmap(p7, rotodfpn9[,c(11:12)], offset=0.525, width=.1,#
+         colnames_angle=90, colnames_offset_y = 25,  high=rgb(0,0,0.75),low="gray",legend_title="interval") #
+p8#
+dev.off()
+pdf("~/Dropbox/salt BT round 2/testggtreeheatv3interval_monly_alltransf9.pdf",width=9,height=10)#
+gtree <- ggtree(hier.phynodenams,ladderize=F,color="gray") + geom_hilight(data=filldat, mapping=aes(node=id, fill=type,extend=6),show.legend=FALSE)  + geom_nodelab()#
+p <- gtree + new_scale_fill()#
+p1 <- gheatmap(p, rotodfpn[,c(1:2)],  high=rgb(0,0,0),low="gray",offset=0, width=.1,#)#. , #,#
+              colnames_angle=90, colnames_offset_y = 12, legend_title="interval")#
+p2 <- p1 + new_scale_fill()#
+p2 <-gheatmap(p2, rotodfpn[,c(3:4)], offset=0.075, width=.1,#
+         colnames_angle=90, colnames_offset_y = 20 ,  high=rgb(.75,0,0),low="gray",legend_title="interval") #
+p3 <-gheatmap(p2, rotodfpn[,c(5:6)], offset=0.15, width=.1,#
+         colnames_angle=90, colnames_offset_y = 20 ,  high=rgb(0.75,0,0),low="gray",legend_title="interval") #
+p4 <- p3 + new_scale_fill()#
+p4 <-gheatmap(p4, rotodfpn[,c(13:14)], offset=0.225, width=.1,#
+         colnames_angle=90, colnames_offset_y = 13)#
+p5 <-gheatmap(p4, rotodfpn[,c(15:16)], offset=0.3, width=.1,#
+         colnames_angle=90, colnames_offset_y = 21,  high=rgb(0.75,0,0.75),low="gray",legend_title="interval") #
+p6 <- p5 + new_scale_fill()#
+p6 <- gheatmap(p6, rotodfpn[,c(7:8)], offset=0.375, width=.1,#
+         colnames_angle=90, colnames_offset_y = 17,  high=rgb(0,0,1),low="gray") #
+p7 <- gheatmap(p6, rotodfpn[,c(9:10)], offset=0.45, width=.1,#
+         colnames_angle=90, colnames_offset_y = 25,  high=rgb(0,0,0.75),low="gray",legend_title="interval") #
+p8 <- gheatmap(p7, rotodfpn[,c(11:12)], offset=0.525, width=.1,#
+         colnames_angle=90, colnames_offset_y = 25,  high=rgb(0,0,0.75),low="gray",legend_title="interval") #
+p8#
+dev.off()
+pdf("products_plot_grid_bonly_noaniline.pdf",height=6,width=4.5)#
+#pdf("products_plot_grid_bonly.pdf",height=6.75,width=4.5)#
+#reaction norm plots#
+#layout(matrix(1:32,ncol=4,byrow=T) ) #,widths=c(.8,.9,.9,1.1))#
+layout(matrix(1:28,ncol=4,byrow=T) ) #,widths=c(.8,.9,.9,1.1))#
+par(mar=c(1.5,2,0,0))#
+par(oma = c(2.5,3,1,1))#
+#
+#for(i in c(1:3,7,8,5,6,9,10)){#
+#for(i in c(1:3,7,8,4,5,6)){#
+for(i in c(1:3,7,8,5,6)){#
+#
+# 	if(i == 5 | i == 6){#
+# 		plot(1~1,pch=NA, xaxt="n",yaxt="n",bty="n")#
+# 		mtext(colnames(mixAA)[i],side=2,cex=0.5,line=2)#
+# 		} else {#
+# 	plot(c(saltAmns[,i],BZTAmns[,i])~c(1:4),col=c(rgb(0.4,0,0),rgb(1,0,0),rgb(0,0,0.4),rgb(0,0,1)), xaxt="n",yaxt="n",pch=16,xlim=c(0,5),#
+# 			ylim=ylimsA[[i]] )#
+# 		arrows(1:4, y0=c(saltAmns[,i],BZTAmns[,i]) - c(saltAses[,i],BZTAses[,i]), y1=c(saltAmns[,i],BZTAmns[,i]) + c(saltAses[,i],BZTAses[,i]),#
+# 			length=0,col=c(rgb(0.4,0,0),rgb(1,0,0),rgb(0,0,0.4),rgb(0,0,1)))#
+# 		if(i==10){axis(side=1,at=c(1:4),labels=c("0","10","0.1","10"))}#
+# 		if(i==10){mtext(side=1,"Salt and BZT",line=2.5)}#
+# 		mtext(colnames(expAtransf)[colorderA][i],side=2,cex=0.5,line=2)#
+# 		axis(side=2,gap.axis=1.5)#
+# 	}#
+#	if(i == 9 | i==10){#
+# 			plot(1~1,pch=NA, xaxt="n",yaxt="n",bty="n")#
+# 			plot(1~1,pch=NA, xaxt="n",yaxt="n",bty="n")#
+# 			plot(1~1,pch=NA, xaxt="n",yaxt="n",bty="n")#
+# 			plot(1~1,pch=NA, xaxt="n",yaxt="n",bty="n")#
+# 			} else{#
+	plot(saltBmns[,i]~c(1:2),col=c(rgb(0.4,0,0),rgb(1,0,0)), xaxt="n",yaxt="n",pch=1,cex=1.5,xlim=c(0,3),#
+			ylim=ylimsB[[i]] )#
+		arrows(1:2, y0=saltBmns[,i] - saltBses[,i], y1=saltBmns[,i] + saltBses[,i],length=0,col=c(rgb(0.4,0,0),rgb(1,0,0)))#
+		if(i==6){axis(side=1,at=c(1,2),labels=c("0","0.8"))}#
+		if(i==6){mtext(side=1,"Salt g/L",line=2.5)}#
+		axis(side=2,gap.axis=1.5)#
+		#bztr, methoxyBZT, and amino3phenol have sig salt effs#
+		if(i%in%c(1,5,8)){text(2.5,ylimsB[[i]][2]*.75,"*",cex=2)}#
+	plot(NLmixAAnosaltn[i,]~rep(1,times=ncol(NLmixAAnosaltn)), xlim=c(0.5,2.5),#
+		ylim=ylimsB[[i]], xlab="",xaxt="n",yaxt="n",ylab="" ,#
+		col=rgb(0,(1-range01(mixAAdens))*0.6,0,alpha=0.5),pch=16)#
+		points(NLmixAAnosaltm[i,]~rep(2,times=ncol(NLmixAAnosaltn)), col=rgb(0,(1-range01(mixAAdens))*0.6,0,alpha=0.5),pch=16)#
+		sapply(1:ncol(NLmixAAnosaltn), function(z) #
+			lines(c(NLmixAAnosaltn[i,z],NLmixAAnosaltm[i,z] ) ~ c(1,2),col= rgb(0,(1-range01(mixAAdens)[z])*0.6,0)) ) #
+		if(i==6){axis(side=1,at=c(1,2),labels=c("d","l"))}#
+		if(i==6){mtext(side=1,"no salt",line=2.5)}#
+			axis(side=2,gap.axis=1.5)#
+	plot(NLmixAAsaltn[i,]~rep(1,times=ncol(NLmixAAsaltn)), xlim=c(0.5,2.5),#
+		ylim=ylimsB[[i]], xlab="",xaxt="n",yaxt="n",ylab="" ,#bufferX(c(NLmixAAsaltn[i,],NLmixAAsaltm[i,]),0.25)#
+		col=rgb(0,(1-range01(mixAAdens))*0.6,0,alpha=0.5),pch=16)#
+		points(NLmixAAsaltm[i,]~rep(2,times=ncol(NLmixAAsaltn)), col=rgb(0,(1-range01(mixAAdens))*0.6,0,alpha=0.5),pch=16)#
+		sapply(1:ncol(NLmixAAsaltn), function(z) #
+			lines(c(NLmixAAsaltn[i,z],NLmixAAsaltm[i,z] ) ~ c(1,2),col= rgb(0,(1-range01(mixAAdens)[z])*0.6,0)) ) #
+		if(i==6){axis(side=1,at=c(1,2),labels=c("d","l"))}#
+		if(i==6){mtext(side=1,"salt",line=2.5)}#
+			axis(side=2,gap.axis=1.5)#
+	plot(c(NLmixAAnosaltn[i,],NLmixAAnosaltm[i,],NLmixAAsaltn[i,],NLmixAAsaltm[i,])~rep(mixAAdens,times=4), #
+		ylim=ylimsB[[i]],#
+		 xlab="",xaxt="n",yaxt="n",ylab="" ,  pch=1, col=rgb(0,0,0,alpha=0.5))#
+			axis(side=2,gap.axis=1.5)#
+		if(i==1){lines(predBRTm~rddens.s)}#
+		if(i==1){polygon(c(rddens.s,rev(rddens.s)), c(predBRTi[1,], rev(predBRTi[2,])),col=rgb(0,0,0,alpha=0.5),border=NA )  }#
+		if(i==3){lines(10e09*exp(predBATm)~rddens.s)}#
+		if(i==3){polygon(c(rddens.s,rev(rddens.s)), 10e09*exp(c(predBATi[1,], rev(predBATi[2,]))),col=rgb(0,0,0,alpha=0.5),border=NA )  }#
+		if(i==8){lines(10e09*exp(predMBTm)~rddens.s)}#
+		if(i==8){polygon(c(rddens.s,rev(rddens.s)), 10e09*exp(c(predMBTi[1,], rev(predMBTi[2,]))),col=rgb(0,0,0,alpha=0.5),border=NA )  }#
+		if(i==5){lines(10e09*exp(predAPTm)~rddens.s)}#
+		if(i==5){polygon(c(rddens.s,rev(rddens.s)), 10e09*exp(c(predAPTi[1,], rev(predAPTi[2,]))),col=rgb(0,0,0,alpha=0.5),border=NA )  }#
+		if(i==6){lines(10e09*exp(predPZTm)~rddens.s)}#
+		if(i==6){polygon(c(rddens.s,rev(rddens.s)), 10e09*exp(c(predPZTi[1,], rev(predPZTi[2,]))),col=rgb(0,0,0,alpha=0.5),border=NA )  }#
+		if(i==6){mtext(side=1,"road density",line=2.5)}#
+		if(i==6){axis(side=1)}#
+		}#
+		#}#
+# 	plot(mixAAtrtbio[,i+5]~mixAAtrtbio$deltapix, ylim=bufferX(mixAAtrtbio[,i+5],0.25),#
+# 		 xlab="",xaxt="n",yaxt="n",ylab="" ,  pch=1, col=rgb(0,0,0,alpha=0.5))#
+# 		if(i==1){lines(predBpxm~dpix.s)}#
+# 		if(i==1){polygon(c(dpix.s,rev(dpix.s)), c(predBpxi[1,], rev(predBpxi[2,])),col=rgb(0,0,0,alpha=0.5),border=NA )  }#
+# 		if(i==6){mtext(side=1,"Area change",line=2.5)}#
+# 		if(i==6){axis(side=1)}#
+# 	plot(mixAAtrtbio[,i+5]~mixAAtrtbio$OD600, ylim=bufferX(mixAAtrtbio[,i+5],0.25),#
+# 		 xlab="",xaxt="n",yaxt="n",ylab="" ,  pch=1, col=rgb(0,0,0,alpha=0.5))#
+# 		if(i==3){lines(predBaom~od.s)}#
+# 		if(i==3){polygon(c(od.s,rev(od.s)), c(predBaoi[1,], rev(predBaoi[2,])),col=rgb(0,0,0,alpha=0.5),border=NA )  }#
+# 		if(i==6){lines(predpzodm~od.s)}#
+# 		if(i==6){polygon(c(od.s,rev(od.s)), c(predpzodi[1,], rev(predpzodi[2,])),col=rgb(0,0,0,alpha=0.5),border=NA )  }#
+# 		if(i==6){mtext(side=1,"OD",line=2.5)}#
+# 		if(i==6){axis(side=1)}#
+dev.off()
+ylimsB <- list( c(0,0.25), c(0,0.11), c(0,0.55), c(0,.4) ,c(0,0.2), c(0,0.1),  c(0,0.25), c(0,0.08), c(0,1), c(0,1))#
+#reaction norm plots#
+#pdf("products_plot_grid_bonly_noaniline.pdf",height=6,width=4.5)#
+pdf("products_plot_grid_bonly.pdf",height=6.75,width=4.5)#
+#reaction norm plots#
+layout(matrix(1:32,ncol=4,byrow=T) ) #,widths=c(.8,.9,.9,1.1))#
+#layout(matrix(1:28,ncol=4,byrow=T) ) #,widths=c(.8,.9,.9,1.1))#
+par(mar=c(1.5,2,0,0))#
+par(oma = c(2.5,3,1,1))#
+#
+#for(i in c(1:3,7,8,5,6,9,10)){#
+for(i in c(1:3,7,8,4,5,6)){#
+#for(i in c(1:3,7,8,5,6)){#
+#
+# 	if(i == 5 | i == 6){#
+# 		plot(1~1,pch=NA, xaxt="n",yaxt="n",bty="n")#
+# 		mtext(colnames(mixAA)[i],side=2,cex=0.5,line=2)#
+# 		} else {#
+# 	plot(c(saltAmns[,i],BZTAmns[,i])~c(1:4),col=c(rgb(0.4,0,0),rgb(1,0,0),rgb(0,0,0.4),rgb(0,0,1)), xaxt="n",yaxt="n",pch=16,xlim=c(0,5),#
+# 			ylim=ylimsA[[i]] )#
+# 		arrows(1:4, y0=c(saltAmns[,i],BZTAmns[,i]) - c(saltAses[,i],BZTAses[,i]), y1=c(saltAmns[,i],BZTAmns[,i]) + c(saltAses[,i],BZTAses[,i]),#
+# 			length=0,col=c(rgb(0.4,0,0),rgb(1,0,0),rgb(0,0,0.4),rgb(0,0,1)))#
+# 		if(i==10){axis(side=1,at=c(1:4),labels=c("0","10","0.1","10"))}#
+# 		if(i==10){mtext(side=1,"Salt and BZT",line=2.5)}#
+# 		mtext(colnames(expAtransf)[colorderA][i],side=2,cex=0.5,line=2)#
+# 		axis(side=2,gap.axis=1.5)#
+# 	}#
+#	if(i == 9 | i==10){#
+# 			plot(1~1,pch=NA, xaxt="n",yaxt="n",bty="n")#
+# 			plot(1~1,pch=NA, xaxt="n",yaxt="n",bty="n")#
+# 			plot(1~1,pch=NA, xaxt="n",yaxt="n",bty="n")#
+# 			plot(1~1,pch=NA, xaxt="n",yaxt="n",bty="n")#
+# 			} else{#
+	plot(saltBmns[,i]~c(1:2),col=c(rgb(0.4,0,0),rgb(1,0,0)), xaxt="n",yaxt="n",pch=1,cex=1.5,xlim=c(0,3),#
+			ylim=ylimsB[[i]] )#
+		arrows(1:2, y0=saltBmns[,i] - saltBses[,i], y1=saltBmns[,i] + saltBses[,i],length=0,col=c(rgb(0.4,0,0),rgb(1,0,0)))#
+		if(i==6){axis(side=1,at=c(1,2),labels=c("0","0.8"))}#
+		if(i==6){mtext(side=1,"Salt g/L",line=2.5)}#
+		axis(side=2,gap.axis=1.5)#
+		#bztr, methoxyBZT, and amino3phenol have sig salt effs#
+		if(i%in%c(1,5,8)){text(2.5,ylimsB[[i]][2]*.75,"*",cex=2)}#
+	plot(NLmixAAnosaltn[i,]~rep(1,times=ncol(NLmixAAnosaltn)), xlim=c(0.5,2.5),#
+		ylim=ylimsB[[i]], xlab="",xaxt="n",yaxt="n",ylab="" ,#
+		col=rgb(0,(1-range01(mixAAdens))*0.6,0,alpha=0.5),pch=16)#
+		points(NLmixAAnosaltm[i,]~rep(2,times=ncol(NLmixAAnosaltn)), col=rgb(0,(1-range01(mixAAdens))*0.6,0,alpha=0.5),pch=16)#
+		sapply(1:ncol(NLmixAAnosaltn), function(z) #
+			lines(c(NLmixAAnosaltn[i,z],NLmixAAnosaltm[i,z] ) ~ c(1,2),col= rgb(0,(1-range01(mixAAdens)[z])*0.6,0)) ) #
+		if(i==6){axis(side=1,at=c(1,2),labels=c("d","l"))}#
+		if(i==6){mtext(side=1,"no salt",line=2.5)}#
+			axis(side=2,gap.axis=1.5)#
+	plot(NLmixAAsaltn[i,]~rep(1,times=ncol(NLmixAAsaltn)), xlim=c(0.5,2.5),#
+		ylim=ylimsB[[i]], xlab="",xaxt="n",yaxt="n",ylab="" ,#bufferX(c(NLmixAAsaltn[i,],NLmixAAsaltm[i,]),0.25)#
+		col=rgb(0,(1-range01(mixAAdens))*0.6,0,alpha=0.5),pch=16)#
+		points(NLmixAAsaltm[i,]~rep(2,times=ncol(NLmixAAsaltn)), col=rgb(0,(1-range01(mixAAdens))*0.6,0,alpha=0.5),pch=16)#
+		sapply(1:ncol(NLmixAAsaltn), function(z) #
+			lines(c(NLmixAAsaltn[i,z],NLmixAAsaltm[i,z] ) ~ c(1,2),col= rgb(0,(1-range01(mixAAdens)[z])*0.6,0)) ) #
+		if(i==6){axis(side=1,at=c(1,2),labels=c("d","l"))}#
+		if(i==6){mtext(side=1,"salt",line=2.5)}#
+			axis(side=2,gap.axis=1.5)#
+	plot(c(NLmixAAnosaltn[i,],NLmixAAnosaltm[i,],NLmixAAsaltn[i,],NLmixAAsaltm[i,])~rep(mixAAdens,times=4), #
+		ylim=ylimsB[[i]],#
+		 xlab="",xaxt="n",yaxt="n",ylab="" ,  pch=1, col=rgb(0,0,0,alpha=0.5))#
+			axis(side=2,gap.axis=1.5)#
+		if(i==1){lines(predBRTm~rddens.s)}#
+		if(i==1){polygon(c(rddens.s,rev(rddens.s)), c(predBRTi[1,], rev(predBRTi[2,])),col=rgb(0,0,0,alpha=0.5),border=NA )  }#
+		if(i==3){lines(10e09*exp(predBATm)~rddens.s)}#
+		if(i==3){polygon(c(rddens.s,rev(rddens.s)), 10e09*exp(c(predBATi[1,], rev(predBATi[2,]))),col=rgb(0,0,0,alpha=0.5),border=NA )  }#
+		if(i==8){lines(10e09*exp(predMBTm)~rddens.s)}#
+		if(i==8){polygon(c(rddens.s,rev(rddens.s)), 10e09*exp(c(predMBTi[1,], rev(predMBTi[2,]))),col=rgb(0,0,0,alpha=0.5),border=NA )  }#
+		if(i==5){lines(10e09*exp(predAPTm)~rddens.s)}#
+		if(i==5){polygon(c(rddens.s,rev(rddens.s)), 10e09*exp(c(predAPTi[1,], rev(predAPTi[2,]))),col=rgb(0,0,0,alpha=0.5),border=NA )  }#
+		if(i==6){lines(10e09*exp(predPZTm)~rddens.s)}#
+		if(i==6){polygon(c(rddens.s,rev(rddens.s)), 10e09*exp(c(predPZTi[1,], rev(predPZTi[2,]))),col=rgb(0,0,0,alpha=0.5),border=NA )  }#
+		if(i==6){mtext(side=1,"road density",line=2.5)}#
+		if(i==6){axis(side=1)}#
+		}#
+		#}#
+# 	plot(mixAAtrtbio[,i+5]~mixAAtrtbio$deltapix, ylim=bufferX(mixAAtrtbio[,i+5],0.25),#
+# 		 xlab="",xaxt="n",yaxt="n",ylab="" ,  pch=1, col=rgb(0,0,0,alpha=0.5))#
+# 		if(i==1){lines(predBpxm~dpix.s)}#
+# 		if(i==1){polygon(c(dpix.s,rev(dpix.s)), c(predBpxi[1,], rev(predBpxi[2,])),col=rgb(0,0,0,alpha=0.5),border=NA )  }#
+# 		if(i==6){mtext(side=1,"Area change",line=2.5)}#
+# 		if(i==6){axis(side=1)}#
+# 	plot(mixAAtrtbio[,i+5]~mixAAtrtbio$OD600, ylim=bufferX(mixAAtrtbio[,i+5],0.25),#
+# 		 xlab="",xaxt="n",yaxt="n",ylab="" ,  pch=1, col=rgb(0,0,0,alpha=0.5))#
+# 		if(i==3){lines(predBaom~od.s)}#
+# 		if(i==3){polygon(c(od.s,rev(od.s)), c(predBaoi[1,], rev(predBaoi[2,])),col=rgb(0,0,0,alpha=0.5),border=NA )  }#
+# 		if(i==6){lines(predpzodm~od.s)}#
+# 		if(i==6){polygon(c(od.s,rev(od.s)), c(predpzodi[1,], rev(predpzodi[2,])),col=rgb(0,0,0,alpha=0.5),border=NA )  }#
+# 		if(i==6){mtext(side=1,"OD",line=2.5)}#
+# 		if(i==6){axis(side=1)}#
+dev.off()#
+# 	plot(mixAA[,i]~mixAAtrt$rddens, ylim=bufferX(c(mixAA[,i]),0.1),#
+# 		 xlab="",xaxt="n",yaxt="n",ylab="" ,  pch=16, col=rgb(0,0,0,alpha=0.5))
+head(productsAAnm)
+image(sign(productsAAnm))
+image(as.matrix(sign(productsAAnm)))
+image(t(as.matrix(sign(productsAAnm))))
+colSums(as.matrix(sign(productsAAnm))
+colSums(as.matrix(sign(productsAAnm)))
+colSums(as.matrix(sign(transf)))
+colSums(as.matrix(sign(products)))
+summary(MCMCglmm(conc_corrected~ Salt + micrnum + Salt:micrnum, random = ~ Genotype + idh(Salt):Genotype + idh(micrnum):Genotype + idh(Salt:micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(conc_corrected~ Salt + micrnum + Salt:micrnum, random = ~ Genotype + idh(Salt):Genotype + idh(micrnum):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(conc_corrected~ Salt + micrnum , random = ~ Genotype + idh(Salt):Genotype + idh(micrnum):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(conc_corrected~ Salt + micrnum + Salt:micrnum, random = ~ Genotype + idh(Salt):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(conc_corrected~ Salt + micrnum + Salt:micrnum, random = ~ Genotype + idh(micrnum):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(conc_corrected~ Salt + micrnum , random = ~ Genotype + idh(Salt):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(conc_corrected~ Salt + micrnum + Salt:micrnum, random = ~ Genotype    ,data=mixAAtrt,nitt=250000,verbose=F)) #-725.65,.66,65
+summary(MCMCglmm(conc_corrected~ Salt + micrnum , random = ~ Genotype    ,data=mixAAtrt,nitt=250000,verbose=F)) #-725.81,.81,.81
+summary(MCMCglmm(conc_corrected~ Salt , random = ~ Genotype    ,data=mixAAtrt,nitt=250000,verbose=F)) #-725.81,.81,.81
+summary(MCMCglmm(conc_corrected~ Salt + micrnum +Salt:micrnum    ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(conc_corrected~ Salt + micrnum     ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(conc_corrected~ Salt     ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(conc_corrected~ Salt, random =~ Genotype + idh(Salt):Genotype + idh(micrnum):Genotype + idh(Salt:micrnum):Genotype  ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(conc_corrected~ Salt, random =~ Genotype + idh(Salt):Genotype + idh(micrnum):Genotype + idh(Salt:micrnum):Genotype  ,data=mixAAtrt,nitt=250000,verbose=F))#-726.67
+summary(MCMCglmm(conc_corrected~ Salt, random =~ Genotype + idh(Salt):Genotype + idh(micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(conc_corrected~ Salt, random =~ Genotype + idh(Salt):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))##
+summary(MCMCglmm(conc_corrected~ Salt, random =~ Genotype + idh(micrnum):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(conc_corrected~ Salt, random =~ Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(BZTaplusBZTaa~ Salt + micrnum +Salt:micrnum    ,data=mixAAtrt,nitt=250000,verbose=F))#-650.1
+summary(MCMCglmm(BZTaplusBZTaa~ Salt + micrnum     ,data=mixAAtrt,nitt=250000,verbose=F))#-650.1
+summary(MCMCglmm(BZTaplusBZTaa~ Salt      ,data=mixAAtrt,nitt=250000,verbose=F))#-650.1
+summary(MCMCglmm(BZTaplusBZTaa~ 1      ,data=mixAAtrt,nitt=250000,verbose=F))#681.5,.4
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype +idh(micrnum):Genotpe +idh(Salt:micrnum):Genotype      ,data=mixAAtrt,nitt=250000,verbose=F))##
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype +idh(micrnum):Genotpe      ,data=mixAAtrt,nitt=250000,verbose=F))##
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype +idh(micrnum):Genotpe +idh(Salt:micrnum):Genotype      ,data=mixAAtrt,nitt=250000,verbose=F))##
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype +idh(micrnum):Genotpe      ,data=mixAAtrt,nitt=250000,verbose=F))##
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype +idh(micrnum):Genotpe +idh(Salt:micrnum):Genotype      ,data=mixAAtrt,nitt=250000,verbose=F))##
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype +idh(micrnum):Genotpe      ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype      ,data=mixAAtrt,nitt=250000,verbose=F))##
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype +idh(micrnum):Genotype      ,data=mixAAtrt,nitt=250000,verbose=F))##
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype      ,data=mixAAtrt,nitt=250000,verbose=F))##
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype +idh(micrnum):Genotype      ,data=mixAAtrt,nitt=250000,verbose=F))##
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype      ,data=mixAAtrt,nitt=250000,verbose=F))##
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype +idh(micrnum):Genotype      ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype      ,data=mixAAtrt,nitt=750000, thin=10, burnin=10000,verbose=F))#662.2, 661.0, 661.0#
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype +idh(micrnum):Genotype      ,data=mixAAtrt,nitt=750000, thin=10, burnin=10000,verbose=F))#660.7, 660.8, 663.8#
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype      ,data=mixAAtrt,nitt=750000, thin=10, burnin=10000,verbose=F))##
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype +idh(micrnum):Genotype      ,data=mixAAtrt,nitt=750000, thin=10, burnin=10000,verbose=F))##
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype      ,data=mixAAtrt,nitt=750000, thin=10, burnin=10000,verbose=F))##
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype +idh(micrnum):Genotype      ,data=mixAAtrt,nitt=750000, thin=10, burnin=10000,verbose=F))
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype      ,data=mixAAtrt,nitt=750000, thin=10, burnin=10000,verbose=F))##
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype +idh(micrnum):Genotype      ,data=mixAAtrt,nitt=750000, thin=10, burnin=10000,verbose=F))##
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype      ,data=mixAAtrt,nitt=750000, thin=10, burnin=10000,verbose=F))##
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype +idh(micrnum):Genotype      ,data=mixAAtrt,nitt=750000, thin=10, burnin=10000,verbose=F))##
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype + idh(Salt):Genotype      ,data=mixAAtrt,nitt=750000, thin=10, burnin=10000,verbose=F))##
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype +idh(micrnum):Genotype      ,data=mixAAtrt,nitt=750000, thin=10, burnin=10000,verbose=F))
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype     ,data=mixAAtrt,nitt=750000, thin=10, burnin=10000,verbose=F))##
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype     ,data=mixAAtrt,nitt=750000, thin=10, burnin=10000,verbose=F))##
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype     ,data=mixAAtrt,nitt=750000, thin=10, burnin=10000,verbose=F))
+summary(MCMCglmm(glycosylatedBZT~ Salt + micrnum +Salt:micrnum    ,data=mixAAtrt,nitt=250000,verbose=F))#-650.1
+summary(MCMCglmm(glycosylatedBZT~ Salt + micrnum +Salt:micrnum    ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(glycosylatedBZT~ Salt + micrnum   ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(glycosylatedBZT~ Salt    ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(glycosylatedBZT~ micrnum    ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(glycosylatedBZT~ Salt    ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(glycosylatedBZT~ micrnum    ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(glycosylatedBZT~ 1    ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(glycosylatedBZT~ 1  , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype  ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(glycosylatedBZT~ 1  , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype  ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(glycosylatedBZT~ 1  , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype  ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(glycosylatedBZT~ 1  , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(glycosylatedBZT~ 1  , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(glycosylatedBZT~ 1  , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(glycosylatedBZT~ 1  , random=~Genotype + idh(Salt):Genotype  ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(glycosylatedBZT~ 1  , random=~Genotype +idh(micrnum):Genotype ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(glycosylatedBZT~ 1  , random=~Genotype + idh(Salt):Genotype  ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(glycosylatedBZT~ 1  , random=~Genotype +idh(micrnum):Genotype ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(glycosylatedBZT~ 1  , random=~Genotype + idh(Salt):Genotype  ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(glycosylatedBZT~ 1  , random=~Genotype +idh(micrnum):Genotype ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(glycosylatedBZT~ 1  , random=~Genotype  ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(glycosylatedBZT~ 1  , random=~Genotype  ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(glycosylatedBZT~ 1  , random=~Genotype  ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(methylBZT~ Salt + micrnum +Salt:micrnum    ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(methylBZT~ Salt + micrnum     ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(methylBZT~ Salt      ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(methylBZT~ micrnum      ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(methylBZT~ 1      ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(methylBZT~ 1 , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))#-7#
+summary(MCMCglmm(methylBZT~ 1 , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))#-7#
+summary(MCMCglmm(methylBZT~ 1 , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))#-7#
+summary(MCMCglmm(methylBZT~ 1 , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))#-7#
+summary(MCMCglmm(methylBZT~ 1 , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))#-7#
+summary(MCMCglmm(methylBZT~ 1 , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))#-7
+summary(MCMCglmm(methylBZT~ 1 , random=~Genotype + idh(Salt):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(methylBZT~ 1 , random=~Genotype +idh(micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))#-7#
+summary(MCMCglmm(methylBZT~ 1 , random=~Genotype + idh(Salt):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(methylBZT~ 1 , random=~Genotype +idh(micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))#-7#
+summary(MCMCglmm(methylBZT~ 1 , random=~Genotype + idh(Salt):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))#
+summary(MCMCglmm(methylBZT~ 1 , random=~Genotype +idh(micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))#-7
+summary(MCMCglmm(methylBZT~ 1 , random=~Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))#-7#
+summary(MCMCglmm(methylBZT~ 1 , random=~Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))#-7#
+summary(MCMCglmm(methylBZT~ 1 , random=~Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))#-7
+summary(MCMCglmm(methoxyBZT~ Salt + micrnum +Salt:micrnum    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(methoxyBZT~ Salt + micrnum     ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(methoxyBZT~ Salt     ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(methoxyBZT~ Salt  , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(methoxyBZT~ Salt  , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(methoxyBZT~ Salt  , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(methoxyBZT~ Salt  , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype     ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(methoxyBZT~ Salt  , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype     ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(methoxyBZT~ Salt  , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype     ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(methoxyBZT~ Salt  , random=~Genotype + idh(Salt):Genotype     ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(methoxyBZT~ Salt  , random=~Genotype +idh(micrnum):Genotype     ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(methoxyBZT~ Salt  , random=~Genotype + idh(Salt):Genotype     ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(methoxyBZT~ Salt  , random=~Genotype +idh(micrnum):Genotype     ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(methoxyBZT~ Salt  , random=~Genotype + idh(Salt):Genotype     ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(methoxyBZT~ Salt  , random=~Genotype +idh(micrnum):Genotype     ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(methoxyBZT~ Salt  , random=~Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(methoxyBZT~ Salt  , random=~Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(methoxyBZT~ Salt  , random=~Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(amino_3_phenol~ Salt + micrnum +Salt:micrnum    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(amino_3_phenol~ Salt + micrnum     ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(amino_3_phenol~ Salt     ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(amino_3_phenol~ Salt , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype     ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(amino_3_phenol~ Salt , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype     ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(amino_3_phenol~ Salt , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype     ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(amino_3_phenol~ Salt , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(amino_3_phenol~ Salt , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(amino_3_phenol~ Salt , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(amino_3_phenol~ Salt , random=~Genotype + idh(Salt):Genotype     ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(amino_3_phenol~ Salt , random=~Genotype + idh(micrnum):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(amino_3_phenol~ Salt , random=~Genotype + idh(Salt):Genotype     ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(amino_3_phenol~ Salt , random=~Genotype + idh(micrnum):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(amino_3_phenol~ Salt , random=~Genotype + idh(Salt):Genotype     ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(amino_3_phenol~ Salt , random=~Genotype + idh(micrnum):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(amino_3_phenol~ Salt , random=~Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(amino_3_phenol~ Salt , random=~Genotype     ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(amino_3_phenol~ Salt , random=~Genotype     ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(phenazine~ Salt + micrnum +Salt:micrnum    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(phenazine~ Salt + micrnum    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(phenazine~ Salt    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(phenazine~ micrnum    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(phenazine~ 1    ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(phenazine~ Salt + micrnum +Salt:micrnum    ,data=mixAAtrt,nitt=250000,verbose=F))# 452.39#
+summary(MCMCglmm(phenazine~ Salt + micrnum    ,data=mixAAtrt,nitt=250000,verbose=F))# 45O.47#
+summary(MCMCglmm(phenazine~ Salt    ,data=mixAAtrt,nitt=250000,verbose=F))# 449.98#
+summary(MCMCglmm(phenazine~ 1    ,data=mixAAtrt,nitt=250000,verbose=F))# 449.82
+summary(MCMCglmm(phenazine~ 1 , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(phenazine~ 1 , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(phenazine~ 1 , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(phenazine~ 1 , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(phenazine~ 1 , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(phenazine~ 1 , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(phenazine~ 1 , random=~Genotype + idh(Salt):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(phenazine~ 1 , random=~Genotype +idh(micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(phenazine~ 1 , random=~Genotype + idh(Salt):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(phenazine~ 1 , random=~Genotype +idh(micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(phenazine~ 1 , random=~Genotype + idh(Salt):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(phenazine~ 1 , random=~Genotype +idh(micrnum):Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(phenazine~ 1 , random=~Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(phenazine~ 1 , random=~Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(phenazine~ 1 , random=~Genotype   ,data=mixAAtrt,nitt=250000,verbose=F))
+ls()
+ls(tmp*)
+ls(pattern="tmp*")
+ls(pattern="tmp1*")
+rm(list=ls(pattern="tmp1*") )
+ls()
+tmp <- MCMCglmm(phenazine~ 1 , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F))# 425.5O,.49,.49
+tmp <- MCMCglmm(phenazine~ 1 , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F)# 425.5O,.49,.49
+tmp <- MCMCglmm(phenazine~ 1 , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype +idh(Salt:micrnum):Genotype    ,data=mixAAtrt,nitt=250000,verbose=F,pr=T)# 425.5O,.49,.49
+summary(tmp)
+head(tmp$Sol)
+head(tmp$VCV)
+trace(tmp$VCV$micrnum.Genotype)
+trace(tmp$VCV[micrnum.Genotype])
+trace(tmp$VCV["micrnum.Genotype"])
+plot(tmp$VCV[,"micrnum.Genotype"])
+plot(tmp$VCV[,"Genotype"])
+plot(tmp$VCV[,"Salt.Genotype"])
+plot(tmp$VCV[,"Salt:micrnum.Genotype"])
+plot(tmp$VCV[,"units"])
+dim(mixAAtrt)
+table(mixAAtrt$Genotype)
+table(paste(mixAAtrt$Genotype,mixAAtrt$Salt))
+table(paste(mixAAtrt$Genotype,mixAAtrt$Salt,mixAAtrt$Microbe))
+sd(c(1,1.2))
+tmp1 <- MCMCglmm(phenazine~ 1 , random=~Genotype + idh(Salt):Genotype +idh(micrnum):Genotype     ,data=mixAAtrt,nitt=250000,verbose=F,pr=T)# 425.5O,.49,.49
+plot(tmp1$VCV[,"units"])
+plot(tmp1$VCV[,"Salt.Genotype"])
+plot(tmp1$VCV[,"micrnum.Genotype"])
+tmp2 <- MCMCglmm(phenazine~ 1 , random=~Genotype + idh(Salt):Genotype      ,data=mixAAtrt,nitt=250000,verbose=F,pr=T)# 425.5O,.49,.49
+plot(tmp2$VCV[,"Salt.Genotype"])
+tmp3 <- MCMCglmm(phenazine~ 1 , random=~ idh(Salt):Genotype      ,data=mixAAtrt,nitt=250000,verbose=F,pr=T)# 425.5O,.49,.49
+plot(tmp3$VCV[,"Salt.Genotype"])
+tmp4 <- MCMCglmm(phenazine~ 1 , random=~idh(micrnum):Genotype      ,data=mixAAtrt,nitt=250000,verbose=F,pr=T)# 425.5O,.49,.49
+plot(tmp4$VCV[,"micrnum.Genotype"])
+tmp3 <- MCMCglmm(phenazine~ 1 , random=~ idh(Salt):Genotype      ,data=mixAAtrt,nitt=750000,verbose=F,pr=T)# 425.5O,.49,.49
+plot(tmp3$VCV[,"Salt.Genotype"])
+tmp3 <- MCMCglmm(phenazine~ 1 , random=~ idh(Salt):Genotype      ,data=mixAAtrt,nitt=750000,burnin=50000,verbose=F,pr=T)# 425.5O,.49,.49
+plot(tmp3$VCV[,"Salt.Genotype"])
+summary(tmp3)
+anova(tmp3)
+anova(lm(phenazine~Genotype,data=mixAAtrt))
+anova(lm(phenazine~Genotype:Salt,data=mixAAtrt))
+anova(lm(phenazine~Genotype + Genotype:Salt,data=mixAAtrt))
+anova(lm(phenazine~Genotype + Genotype:micrnum,data=mixAAtrt))
+anova(lm(phenazine~ Genotype:micrnum,data=mixAAtrt))
+anova(lm(phenazine~Genotype + Genotype:micrnum + Genotype:Salt,data=mixAAtrt))
+anova(lm(phenazine~Genotype + Genotype:micrnum + Genotype:Salt + Genotype:Salt:micrnum,data=mixAAtrt))
+anova(lm(phenazine~Genotype + Genotype:Salt:micrnum,data=mixAAtrt))
+anova(lm(phenazine~Genotype + Genotype:micrnum  + Genotype:Salt:micrnum,data=mixAAtrt))
+anova(lm(phenazine~Genotype + Genotype:Salt:micrnum,data=mixAAtrt))
+anova(lm(phenazine~ Salt + micrnum + Genotype + Genotype:micrnum  + Genotype:Salt:micrnum,data=mixAAtrt))
+anova(lm(phenazine~ Salt + micrnum + Genotype + Genotype:micrnum  ,data=mixAAtrt))
+anova(lm(phenazine~ Salt + micrnum + Genotype + Genotype:Salt  ,data=mixAAtrt))
+anova(lm(phenazine~ Salt + micrnum + Genotype + Genotype:Salt +Genotype:micrnum ,data=mixAAtrt))
+anova(lm(phenazine~ Salt + micrnum + Genotype + Genotype:Salt +Genotype:micrnum +Genotype:micrnum:Salt ,data=mixAAtrt))
+tmp4 <- MCMCglmm(phenazine~ 1 , random=~ Salt:Genotype      ,data=mixAAtrt,nitt=750000,burnin=50000,verbose=F,pr=T)# 425.5O,.49,.49
+summary(tmp4)
+plot(tmp3$VCV[,"units"])
+plot(tmp4$VCV[,"units"])
+plot(tmp4$VCV[,"Salt.Genotype"])
+head(tmp4$VCV)
+plot(tmp4$VCV[,"Salt:Genotype"])
+tmp4$DIC
+tmp3$DIC
+tmpgeno <- MCMCglmm(phenazine~ 1 , random=~ Genotype      ,data=mixAAtrt,nitt=750000,burnin=50000,verbose=F,pr=T)# 425.5O,.49,.49
+summary(tmpgeno)
+tmpgeno <- MCMCglmm(phenazine~ 1 , random=~ Genotype      ,data=mixAAtrt,nitt=750000,burnin=50000,verbose=F,pr=T)# 425.5O,.49,.49
+tmpgeno$DIC
+summary(MCMCglmm(conc_corrected~ Salt, random =~ Genotype:Salt    ,data=mixAAtrt,nitt=250000,verbose=F))##
+summary(MCMCglmm(conc_corrected~ Salt, random =~ Genotype:Salt    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(conc_corrected~ Salt, random =~ Genotype:Salt    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(conc_corrected~ Salt, random =~ Genotype:micrnum    ,data=mixAAtrt,nitt=250000,verbose=F))##
+summary(MCMCglmm(conc_corrected~ Salt, random =~ Genotype:micrnum    ,data=mixAAtrt,nitt=250000,verbose=F))# #
+summary(MCMCglmm(conc_corrected~ Salt, random =~ Genotype:micrnum    ,data=mixAAtrt,nitt=250000,verbose=F))
+btmp <- (MCMCglmm(conc_corrected~ Salt, random =~ Genotype:micrnum    ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(btmp)
+plot(btmp$VCV["Genotype"])
+plot(btmp$VCV["Genotype:micrnum"])
+plot(btmp$VCV[,"Genotype:micrnum"])
+plot(btmp$VCV[,"units"])
+summary(MCMCglmm(conc_corrected~ Salt, random =~ Genotype:micrnum:Salt   ,data=mixAAtrt,nitt=250000,verbose=F))##
+summary(MCMCglmm(conc_corrected~ Salt, random =~ Genotype:micrnum:Salt   ,data=mixAAtrt,nitt=250000,verbose=F))##
+summary(MCMCglmm(conc_corrected~ Salt, random =~ Genotype:micrnum:Salt   ,data=mixAAtrt,nitt=250000,verbose=F))
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype:Salt     ,data=mixAAtrt,nitt=750000, thin=10, burnin=10000,verbose=F))##
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype:Salt     ,data=mixAAtrt,nitt=750000, thin=10, burnin=10000,verbose=F))##
+summary(MCMCglmm(BZTaplusBZTaa~ 1, random = ~ Genotype:Salt     ,data=mixAAtrt,nitt=750000, thin=10, burnin=10000,verbose=F))
+library(geosphere) #for km bt lat/lon points#
+library(MCMCglmm)#
+range01=function(x){#
+newnums=(x-min(x,na.rm=T))/(max(x,na.rm=T)-min(x,na.rm=T))#
+return(newnums)#
+}#
+#
+bw <- colorRampPalette(c(rgb(1,1,1),rgb(0,0,0)))#
+#
+#a remove missing data function:#
+getfull <- function(dat){#
+	whichfull <- which(sapply(1:nrow(dat), function(z) any(is.na(dat[z,]) ) )==FALSE)#
+	return(whichfull)#
+}#
+#
+#shortcut for coda HPDinterval #
+HPDi <- function(vect,prob){#
+	int <- HPDinterval(as.mcmc(vect),prob=prob)#
+	return(int)#
+}#
+#
+bufferX <- function(x,p) { #
+	r<- range(x,na.rm=T)#
+	add <- c(-1,1)*p*(r[2]-r[1])#
+	return(r+add)#
+	}	#
+std.error <- function(dat, na.rm=TRUE) {sd(dat,na.rm=na.rm)/sqrt(length(dat))}#defaults to na.rm=T#
+#
+MapToWellsBZ <- function(dat,map,firstcol, sumcols, meancols){ #columns labeled "plate" "number",#
+		#roi is in the BZT2 files the coordinates of the shape, and "number" is the simple ROI number#
+	n <- nrow(map)#
+	outdata <- matrix(NA,nrow=n, ncol=(length(sumcols)+length(meancols)+1))#
+	for(i in 1:n){#
+		rois <- map[i,firstcol:ncol(map)] #what happens to NA values#
+		p <- map$plate[i]#
+		welldat <- dat[dat$plate==p & dat$number%in%rois,]#
+		welldat.sums <- colSums(welldat[,sumcols])#
+		welldat.means <- colMeans(welldat[,meancols],na.rm=T)#
+		wellstats <- c(nrow(welldat),welldat.sums,welldat.means)#
+		outdata[i,] <- wellstats#
+		}#
+	mappeddata <- cbind(map[,1:(firstcol-1)],outdata)#
+	colnames(mappeddata) <- c(colnames(map)[1:(firstcol-1)],"particles",colnames(dat)[sumcols],colnames(dat)[meancols])#
+	return(mappeddata)#
+}#
+sampleinfo 		<- read.csv("~/Dropbox/salt BT round 2/Lemna_microbiome_barebones_meta_inbzt2.csv",header=T,stringsAsFactors=F)#
+duclocs <- read.csv("~/Dropbox/duckweed locations Jan11 2018.csv",stringsAsFactors=F,header=T)#
+roaddens <- read.csv("~/Dropbox/salt BT round 2/Roaddensityin_locsbzs2.csv",header=T, stringsAsFactors=F)#
+sampleinfo$lat <- unlist(sapply(1:nrow(sampleinfo), function(z) duclocs$lat[which(duclocs[,2]==sampleinfo$site.id[z])]))#
+sampleinfo$lon <- unlist(sapply(1:nrow(sampleinfo), function(z) duclocs$lon[which(duclocs[,2]==sampleinfo$site.id[z])]))#
+issampleinfoinrdense <- sapply(1:nrow(sampleinfo), function(z) sampleinfo$site.id[z]%in%roaddens[,2])#
+roaddensinsi <- unlist(sapply(1:nrow(sampleinfo), function(z) roaddens$road.density.m.km2[which(roaddens[,2]==sampleinfo$site.id[z])]))#
+sampleinfo$roaddens <- rep(NA, times=nrow(sampleinfo))#
+sampleinfo$roaddens[ issampleinfoinrdense] <- roaddensinsi/1000#
+sampleinfo$km.cityC <- distHaversine(matrix(cbind(-1*sampleinfo$lon,sampleinfo$lat),ncol=2),c(-79.3832,43.6532))/1000#
+bzsinfou <- sampleinfo[sampleinfo$fieldormaster=="M"& !is.na(sampleinfo$bzs2),]#
+bzsinfo <- bzsinfou[order(bzsinfou$bzs2),]#
+#
+#OD dat#
+bzs2.raw <- read.csv("~/Dropbox/salt BT round 2/AO BZS.2.ODall.csv",header=T,stringsAsFactors=F)#
+#first, need to add coordinates for experimental plate. 2 48-well plates were run for optical density in 1 96-well plate#
+#first plate in cols 1-6, next in 7-12 two samples from each well so A went to both A&B in the 96-well ,#
+bzs2.raw$plate <- as.numeric(sapply(1:nrow(bzs2.raw), function(z) unlist(strsplit(bzs2.raw$OD.plate[z],split="[.]"))[1] ))#
+bzs2.raw$pair <- sapply(1:nrow(bzs2.raw), function(z)   ifelse(bzs2.raw$OD.col[z] <=6, "I","II"))#
+bzs2.raw$platepair <- paste(bzs2.raw$plate,bzs2.raw$pair,sep=".")#
+bzs2.raw$row <- sapply(bzs2.raw$OD.row, function(z) #
+	  if(z == "A" | z == "B") "A" else if(z == "C" | z == "D") "B" else if(z == "E" | z== "F") "C" else "D" )#
+bzs2.raw$col <- sapply(bzs2.raw$OD.col, function(z) ifelse(z<= 6, z, z-6))	  #
+#
+#take the average/midpoint for each well (wells have two measures each)#
+fullloc <- paste(bzs2.raw$plate,bzs2.raw$pair,bzs2.raw$row,bzs2.raw$col,sep=".") #
+od600 <- tapply(bzs2.raw$OD600.raw, fullloc, mean,na.rm=T)#
+od750 <- tapply(bzs2.raw$OD750.raw, fullloc, mean,na.rm=T)#
+plate <- tapply(bzs2.raw$plate, fullloc, mean,na.rm=T)#
+pair <-  c("I","II")[tapply(as.numeric(as.factor(bzs2.raw$pair)), fullloc, mean,na.rm=T)]#
+cols <- tapply(bzs2.raw$col, fullloc, mean,na.rm=T)#
+rows <- c("A","B","C","D")[tapply(as.numeric(as.factor(bzs2.raw$row)), fullloc, mean,na.rm=T)]#
+##
+od_datRawu <- data.frame(plate = plate, pair = pair, row=rows, col = cols,od600 = od600, od750 = od750)#
+od_datRaw <- od_datRawu[order(od_datRawu$plate, od_datRawu$pair,od_datRawu$row,od_datRawu$col,decreasing=F ),] #note the tapply(), then this re-sorts so to sort by plate, then ROW then column, which matches clara's frond data sorting#
+#sorting still required, because otherwise it's alphabetical by the tapply levels, and plates 10-19 come before plates 2-9 & etc#
+#
+#frond data#
+frondsRaw <- read.csv("~/Dropbox/salt BT round 2/BZS2 Frond Clara.csv",stringsAsFactors=F,header=T)#
+#
+#pixel area data#
+##
+endmapu <- read.csv("~/Dropbox/salt BT round 2/end_map_12-01.csv",header=T)#
+endmap <- endmapu[order( as.numeric(endmapu$plate), endmapu$row, endmapu$column  ),]#
+endfulldat <- read.csv("~/Dropbox/salt BT round 2/end_data_pastedDec1.csv",header=T) # note column X.area is %area from imageJ#
+#
+day5mapu <- read.csv("~/Dropbox/salt BT round 2/Feb18-19_map_edit12aprand6may.csv",header=T)#
+day5map <- day5mapu[order( as.numeric(day5mapu$plate), day5mapu$row, day5mapu$column  ),]#
+day5fulldat <- read.csv("~/Dropbox/salt BT round 2/Feb18-19_data_fix472_p1.1_andp39.csv",header=T) # note column X.area is %area from imageJ#
+#
+day7mapu <- read.csv("~/Dropbox/salt BT round 2/Feb20-21map edited june19.csv",header=T)#
+day7map <- day7mapu[order( as.numeric(day7mapu$plate), day7mapu$row, day7mapu$column  ),]#
+day7fulldat <- read.csv("~/Dropbox/salt BT round 2/Feb20-21dat.csv",header=T) # note column X.area is %area from imageJ#
+startmapu <- read.csv("~/Dropbox/salt BT round 2/start map ALL.csv",header=T)#
+startmap <- startmapu[order( as.numeric(startmapu$plate), startmapu$row, startmapu$column  ),]#
+startfulldat <- read.csv("~/Dropbox/salt BT round 2/start data ALL.csv",header=T) # note column X.area is %area from imageJ#
+#
+#there is a plate column, but not image name column in the map file. we therefore need to extract plate from the dat file#
+colors <- c("(blue)","(green)","(red)")#
+# END PLATES#
+colorrows <- lapply(colors,function(z) grep(z,endfulldat$label))#
+endfulldat2 <- endfulldat[-unlist(colorrows),]#
+endfulldat2$redraw <- endfulldat[colorrows[[3]],]$mean#
+endfulldat2$greenraw <- endfulldat[colorrows[[2]],]$mean#
+endfulldat2$blueraw <- endfulldat[colorrows[[1]],]$mean#
+##CHECK THAT THEY LINE UP, should be 1/4 nrow(endfulldat):#
+nrow(endfulldat) == 4*length(colorrows[[3]])#
+sum(endfulldat2$area == endfulldat[colorrows[[3]],]$area) == 0.25*nrow(endfulldat)#
+sum(endfulldat2$area == endfulldat[colorrows[[2]],]$area)== 0.25*nrow(endfulldat)#
+sum(endfulldat2$area == endfulldat[colorrows[[1]],]$area)== 0.25*nrow(endfulldat)#
+endfulldat2$perred <- endfulldat2$redraw/(3*endfulldat2$mean)#
+endfulldat2$pergreen <- endfulldat2$greenraw/(3*endfulldat2$mean)#
+endfulldat2$perblue <- endfulldat2$blueraw/(3*endfulldat2$mean)#
+##
+platepix <- sapply(1:nrow(endfulldat2), function(z) strsplit(#
+									strsplit(as.character(endfulldat2$label[z]),"plate",fixed=T)[[1]][[2]],#
+										".J") [[1]][[1]]										)#
+endfulldat2$plate <- platepix#
+enddatU <- MapToWellsBZ(endfulldat2,endmap,firstcol=6,sumcols = c(5,7),meancols =c(6,8,10:12,16:18) )#
+enddatc <- enddatU[order( as.numeric(enddatU$plate), enddatU$row, enddatU$column  ),]#
+#
+#FEB20-21, day 7#
+colorrows <- lapply(colors,function(z) grep(z,day7fulldat$label))#
+day7fulldat2 <- day7fulldat[-unlist(colorrows),]#
+day7fulldat2$redraw <- day7fulldat[colorrows[[3]],]$mean#
+day7fulldat2$greenraw <- day7fulldat[colorrows[[2]],]$mean#
+day7fulldat2$blueraw <- day7fulldat[colorrows[[1]],]$mean#
+##CHECK THAT THEY LINE UP, should be 1/4 nrow(day7fulldat):#
+nrow(day7fulldat) == 4*length(colorrows[[3]])#
+sum(day7fulldat2$area == day7fulldat[colorrows[[3]],]$area) == 0.25*nrow(day7fulldat)#
+sum(day7fulldat2$area == day7fulldat[colorrows[[2]],]$area)== 0.25*nrow(day7fulldat)#
+sum(day7fulldat2$area == day7fulldat[colorrows[[1]],]$area)== 0.25*nrow(day7fulldat)#
+day7fulldat2$perred <- day7fulldat2$redraw/(3*day7fulldat2$mean)#
+day7fulldat2$pergreen <- day7fulldat2$greenraw/(3*day7fulldat2$mean)#
+day7fulldat2$perblue <- day7fulldat2$blueraw/(3*day7fulldat2$mean)#
+##
+platepix <- sapply(1:nrow(day7fulldat2), function(z) strsplit(#
+									strsplit(as.character(day7fulldat2$label[z]),"plate",fixed=T)[[1]][[2]],#
+										".J") [[1]][[1]]										)#
+day7fulldat2$plate <- platepix#
+day7datU <- MapToWellsBZ(day7fulldat2,day7map,firstcol=6,sumcols = c(4,6),meancols =c(5,7,9:11,15:17) )#
+day7datc <- day7datU[order( as.numeric(day7datU$plate), day7datU$row, day7datU$column  ),]#
+#FEB18-19, day 5#
+colorrows <- lapply(colors,function(z) grep(z,day5fulldat$label))#
+day5fulldat2 <- day5fulldat[-unlist(colorrows),]#
+day5fulldat2$redraw <- day5fulldat[colorrows[[3]],]$mean#
+day5fulldat2$greenraw <- day5fulldat[colorrows[[2]],]$mean#
+day5fulldat2$blueraw <- day5fulldat[colorrows[[1]],]$mean#
+##CHECK THAT THEY LINE UP, should be 1/4 nrow(day5fulldat):#
+nrow(day5fulldat) == 4*length(colorrows[[3]])#
+sum(day5fulldat2$area == day5fulldat[colorrows[[3]],]$area) == 0.25*nrow(day5fulldat)#
+sum(day5fulldat2$area == day5fulldat[colorrows[[2]],]$area)== 0.25*nrow(day5fulldat)#
+sum(day5fulldat2$area == day5fulldat[colorrows[[1]],]$area)== 0.25*nrow(day5fulldat)#
+day5fulldat2$perred <- day5fulldat2$redraw/(3*day5fulldat2$mean)#
+day5fulldat2$pergreen <- day5fulldat2$greenraw/(3*day5fulldat2$mean)#
+day5fulldat2$perblue <- day5fulldat2$blueraw/(3*day5fulldat2$mean)#
+##
+platepix <- sapply(1:nrow(day5fulldat2), function(z) strsplit(#
+									strsplit(as.character(day5fulldat2$label[z]),"plate",fixed=T)[[1]][[2]],#
+										".J") [[1]][[1]]										)#
+day5fulldat2$plate <- platepix#
+day5datU <- MapToWellsBZ(day5fulldat2,day5map,firstcol=5,sumcols = c(4,6),meancols =c(5,7,9:11,15:17) )#
+day5datc <- day5datU[order( as.numeric(day5datU$plate), day5datU$row, day5datU$column  ),]#
+#
+# START PLATES#
+colorrowsS <- lapply(colors,function(z) grep(z,startfulldat$label))#
+startfulldat2 <- startfulldat[-unlist(colorrowsS),]#
+startfulldat2$redraw <- startfulldat[colorrowsS[[3]],]$mean#
+startfulldat2$greenraw <- startfulldat[colorrowsS[[2]],]$mean#
+startfulldat2$blueraw <- startfulldat[colorrowsS[[1]],]$mean#
+nrow(startfulldat) == 4*length(colorrowsS[[3]])#
+sum(startfulldat2$area == startfulldat[colorrowsS[[3]],]$area) == 0.25*nrow(startfulldat)#
+sum(startfulldat2$area == startfulldat[colorrowsS[[2]],]$area)== 0.25*nrow(startfulldat)#
+sum(startfulldat2$area == startfulldat[colorrowsS[[1]],]$area)== 0.25*nrow(startfulldat)#
+startfulldat2$perred <- startfulldat2$redraw/(3*startfulldat2$mean)#
+startfulldat2$pergreen <- startfulldat2$greenraw/(3*startfulldat2$mean)#
+startfulldat2$perblue <- startfulldat2$blueraw/(3*startfulldat2$mean)#
+platepixS <- sapply(1:nrow(startfulldat2), function(z) strsplit(#
+									strsplit(as.character(startfulldat2$label[z]),"plate",fixed=T)[[1]][[2]],#
+										".J") [[1]][[1]]										)#
+startfulldat2$plate <- platepixS#
+startdatU <- MapToWellsBZ(startfulldat2,startmap,firstcol=5,sumcols = c(4,6),meancols =c(5,7,9:11,15:17) )#
+startdatc <- startdatU[order( as.numeric(startdatU$plate), startdatU$row, startdatU$column  ),]#
+#
+#### convert to square mm of tissue at same time#
+#experiment was set up in 2 times steps, plates 1-20; then 21-50#
+standarddim <- read.csv("~/Dropbox/salt BT round 2/wellsizeBZS2photos.csv")#
+#conversion factors by day#
+pxpmm <- standarddim$pixlength / standarddim$mm.length #standard width between centers of wells, and measures in representative images#
+dayofphoto <- c(rep(1,times=960),rep(2,times=1440))#
+startdat <- startdatc; day5dat <- day5datc; day7dat<-day7datc; enddat <-enddatc#
+startdat$area <- startdatc$area/(pxpmm[dayofphoto])^2 #
+day5dat$area <- day5datc$area/(pxpmm[dayofphoto+2])^2 #
+day7dat$area <- day7datc$area/(pxpmm[dayofphoto+4])^2 #
+enddat$area <-  enddatc$area/(pxpmm[dayofphoto+6])^2   #
+arabicpairod <- ifelse(od_datRaw$pair=="I",1,2)#
+arabicppod <- as.numeric (paste(od_datRaw$plate,arabicpairod,sep="."))#
+# same_sampleid <- paste(arabicplateod,paste(od_datRaw$row,od_datRaw$col,sep=""),sep=".")#
+arabicplatefr <- sapply(1:nrow(frondsRaw), function(z) strsplit(frondsRaw$plate[z],"[.]")[[1]][1])#
+pairfr <-  sapply(1:nrow(frondsRaw), function(z) strsplit(frondsRaw$plate[z],"[.]")[[1]][2])#
+arabicpairfr <-  ifelse(pairfr=="I",1,2)#
+arabicppfr <- paste(arabicplatefr,arabicpairfr,sep=".")#
+#
+#checks that data align as hoped across datasets#
+sum(arabicppfr == arabicppod)#
+sum(arabicppfr == enddat$plate)#
+sum(arabicppfr == startdat$plate)#
+sum(frondsRaw$column == od_datRaw$col)#
+sum(frondsRaw$column == enddat$column)#
+sum(frondsRaw$row == od_datRaw$row)#
+sum(frondsRaw$row == enddat$row)#
+frondsRaw$arabicpp <- arabicppfr#
+od_datRaw$arabicpp <- arabicppod#
+#
+#remove error rows#
+fronds <- frondsRaw[frondsRaw$unfixed.error != "ERROR",]#
+od_dat <- od_datRaw[frondsRaw$unfixed.error != "ERROR",]#
+endpix <- enddat[frondsRaw$unfixed.error != "ERROR",]#
+startpix <- startdat[frondsRaw$unfixed.error != "ERROR",]#
+midpix <- day5dat[frondsRaw$unfixed.error != "ERROR",]#
+midpix2 <- day7dat[frondsRaw$unfixed.error != "ERROR",]#
+#
+##
+colnames(startpix) <- paste("start",colnames(startdat),sep="_")#
+colnames(midpix) <- paste("mid",colnames(midpix),sep="_")#
+colnames(midpix2) <- paste("mid2",colnames(midpix2),sep="_")#
+#
+#fix issue with fronds file:#
+#the experiment prep notes in photographs show col6 of platepair 23 should be MNT, col4 of plaitepaire 23 should be SHB#
+#in the frond data this is swapped (an error was made in swapping labels, there had been 2 cols of SHB in original design, one column was swapped to MNT but the wrong column was changed in the file)#
+fronds$genotype[od_dat$plate==23 & fronds$col==6] <- "Mnt"#
+fronds$genotype[od_dat$plate==23 & fronds$col==4] <- "SHB"#
+#
+biodat <- data.frame(cbind(fronds[1:14],od_dat$od600,od_dat$od750,endpix[,c(2,6:16)],startpix[,c(1,5:15)], midpix[,c(1,5:15)],  midpix2[,c(1,5:15)]))#
+biodat$microbeyn <- ifelse(biodat$microbe=="+","Y","N")#
+biodatlocs <- sapply(biodat$genotype, function(x) bzsinfo$km.cityC[which(as.character(bzsinfo$bzs2)==as.character(x))])#
+biodat$loc <- biodatlocs#
+biodat$rddns <- sapply(biodat$genotype, function(x) bzsinfo$roaddens[which(as.character(bzsinfo$bzs2)==as.character(x))])#
+biodat$deltapix <- biodat$area - biodat$start_area#
+biodat$dpixmid <- biodat$mid_area - biodat$start_area#
+biodat$dpix511 <- biodat$area - biodat$mid_area#
+biodat$dpixmid2 <- biodat$mid2_area - biodat$start_area#
+biodat$dpix711 <- biodat$area - biodat$mid2_area
+dpixRbest <- MCMCglmm(deltapix~rddns +  microbe + BZT + Salt + BZT:Salt + microbe:Salt, #
+						data=biodat,verbose=F, nitt=100000,thin=10,burnin=10000,pr=T)#
+summary(dpixRbest)#
+rd.s <- seq(from=min(biodat$rddns),to=max(biodat$rddns),length.out=1000)#
+dpxsolrd <- dpixRbest$Sol#
+dpxng.mnrd <- sapply(1:length(rd.s), function(z) mean(dpxsolrd[,1]+ dpxsolrd[,2]*rd.s[z] + dpxsolrd[,3]*0.5 + dpxsolrd[,4]*0.5+ dpxsolrd[,5]*0.5 + dpxsolrd[,6]*0.5 + dpxsolrd[,7]*0.5) )#
+dpxng.hpdird <- sapply(1:length(rd.s), function(z) HPDi(dpxsolrd[,1]+ dpxsolrd[,2]*rd.s[z] + dpxsolrd[,3]*0.5 + dpxsolrd[,4]*0.5+ dpxsolrd[,5]*0.5 + dpxsolrd[,6]*0.5 + dpxsolrd[,7]*0.5, 0.95) )#
+dpixrdmn <- tapply(biodat$deltapix,biodat$rddns,mean)#
+rdrd <- tapply(biodat$rddns,biodat$rddns,mean)#
+dpix.mns <- tapply(biodat$deltapix, paste(biodat$microbe,biodat$Salt,biodat$BZT),mean)#
+dpix.ses <- tapply(biodat$deltapix, paste(biodat$microbe,biodat$Salt,biodat$BZT),std.error)#
+#OPTICAL DENSITY#
+#testing normality assumption, and taking log to address issue#
+shapiro.test((biodat$od_dat.od600))#
+shapiro.test((biodat$od_dat.od750))#
+shapiro.test(log(biodat$od_dat.od600+min(biodat$od_dat.od600[biodat$od_dat.od600>0],na.rm=T)))#
+shapiro.test(log(biodat$od_dat.od750+min(biodat$od_dat.od750[biodat$od_dat.od750>0],na.rm=T)))#
+biodat$lnod600 <- log(biodat$od_dat.od600+ min(biodat$od_dat.od600[biodat$od_dat.od600>0],na.rm=T ) )#
+biodat$lnod750 <- log(biodat$od_dat.od750+ min(biodat$od_dat.od750[biodat$od_dat.od750>0],na.rm=T ) )#
+#
+bioMdat <- biodat[biodat$microbe=="+",]#
+#
+inocModng <- MCMCglmm(lnod600 ~microbe,data=biodat,verbose=F, nitt=50000,thin=10,burnin=1000)#
+summary(inocModng) #
+#therefore + and - are more "disrupted" and "local"#
+inocmns <- tapply(biodat$lnod600,biodat$microbe,mean,na.rm=T)#
+inocses <- tapply(biodat$lnod600,biodat$microbe,std.error,na.rm=T)
+mbod600ngrdr6 <- MCMCglmm(lnod600 ~rddns    , data=bioMdat,verbose=F, nitt=100000,thin=10,burnin=10000)#
+summary(mbod600ngrdr6)#
+odngRd.mns <- sapply(rd.s,function(z)	mean(mbod600ngrdr6$Sol[,1] + mbod600ngrdr6$Sol[,2]*z))#
+odngRd.hpdis <- sapply(rd.s,function(z)	HPDi(mbod600ngrdr6$Sol[,1] + mbod600ngrdr6$Sol[,2]*z,0.95))#
+odrdmns <- tapply(bioMdat$lnod600,bioMdat$rddns,mean)
+par(mfrow=c(1,3))#
+par(mar=c(3.5,4,1.5,0))#
+par(oma=c(0,0,0,0))#
+plot(dpix.mns~c(2,2.1,2.2,2.3,3,3.1,3.2,3.3),xaxt="n",xlab="",ylab="", cex=2, xlim=c(1.8,3.5),#
+		col = c(rgb(0,0,0),rgb(0,0,0.75),rgb(0.75,0,0),rgb(0.75,0,0.75)), pch=c(1:4),#
+		ylim=c(10,21))#
+	arrows(c(2,2.1,2.2,2.3,3,3.1,3.2,3.3),dpix.mns-dpix.ses,y1=dpix.mns+dpix.ses,length=0,#
+		col = c(rgb(0,0,0),rgb(0,0,0.75),rgb(0.75,0,0),rgb(0.75,0,0.75)), lwd=2)#
+	arrows(c(2,2.1,2.2,2.3), dpix.mns[1:4], x1=c(3,3.1,3.2,3.3),dpix.mns[5:8], length=0, lwd=2,#
+		col = c(rgb(0,0,0,alpha=0.5),rgb(0,0,0.75,alpha=0.5),rgb(0.75,0,0,alpha=0.5),rgb(0.75,0,0.75,alpha=0.5)),lty=2)#
+	axis(side=1, at=c(2.15,3.15),labels=c("disrupted","local"),cex.axis=1.25)#
+	mtext("microbes",side=1,line=2.2)#
+	mtext(bquote("plant growth, mm"^2),side=2,line=2)#
+	legend(1.7,22,c("Neither","1 mg/L BZT","0.8 g/L Salt","Both"), bty="n", pch=c(1:4),#
+		 col = c(rgb(0,0,0),rgb(0,0,0.75),rgb(0.75,0,0),rgb(0.75,0,0.75)),cex=1.25)#
+	mtext("a.",side=3,adj=-0.25,line=0.3)#
+plot(dpixrdmn~rdrd,pch=NA,ylab="",xlab="",ylim=c(-3,40))#
+	polygon(c(rd.s,rev(rd.s)), y=c(dpxng.hpdird[1,],rev(dpxng.hpdird[2,])), col=rgb(0,0,0,alpha=0.5), border=NA)#
+	lines(dpxng.mnrd~rd.s,lwd=2)	#
+	points(dpixrdmn~rdrd,pch=16,cex=1.5)#
+	mtext(bquote("plant growth, mm"^2),side=2,line=2)#
+	mtext("road density",side=1,line=2.2) #length per area. - km / km^2#
+	mtext("b.",side=3,adj=-0.25,line=0.3)#
+plot(odrdmns~rdrd,pch=16,cex=1.5,xlab="",ylab="",ylim=c(-2.5,-1.6))#
+	polygon(c(rd.s,rev(rd.s)), y=c(odngRd.hpdis[1,],rev(odngRd.hpdis[2,])), col=rgb(0,0,0,alpha=0.5), border=NA)#
+	lines(odngRd.mns~rd.s,lwd=2)#
+	mtext("microbe growth, ln(OD)",side=2,line=2.5)##
+	mtext("road density",side=1,line=2.2)#
+	mtext("c.",side=3,adj=-0.25,line=0.3)
+par(mfrow=c(1,3))#
+par(mar=c(3.5,4,1.5,0))#
+par(oma=c(0,0,0,0))#
+plot(dpix.mns~c(2,2.1,2.2,2.3,3,3.1,3.2,3.3),xaxt="n",xlab="",ylab="", cex=2, xlim=c(1.8,3.5),#
+		col = c(rgb(0,0,0),rgb(0,0,0.75),rgb(0.75,0,0),rgb(0.75,0,0.75)), pch=c(0:2,6),#
+		ylim=c(10,21))#
+	arrows(c(2,2.1,2.2,2.3,3,3.1,3.2,3.3),dpix.mns-dpix.ses,y1=dpix.mns+dpix.ses,length=0,#
+		col = c(rgb(0,0,0),rgb(0,0,0.75),rgb(0.75,0,0),rgb(0.75,0,0.75)), lwd=2)#
+	arrows(c(2,2.1,2.2,2.3), dpix.mns[1:4], x1=c(3,3.1,3.2,3.3),dpix.mns[5:8], length=0, lwd=2,#
+		col = c(rgb(0,0,0,alpha=0.5),rgb(0,0,0.75,alpha=0.5),rgb(0.75,0,0,alpha=0.5),rgb(0.75,0,0.75,alpha=0.5)),lty=2)#
+	axis(side=1, at=c(2.15,3.15),labels=c("disrupted","local"),cex.axis=1.25)#
+	mtext("microbes",side=1,line=2.2)#
+	mtext(bquote("plant growth, mm"^2),side=2,line=2)#
+	legend(1.7,22,c("Neither","1 mg/L BZT","0.8 g/L Salt","Both"), bty="n", pch=c(0:2,6),#
+		 col = c(rgb(0,0,0),rgb(0,0,0.75),rgb(0.75,0,0),rgb(0.75,0,0.75)),cex=1.25)#
+	mtext("a.",side=3,adj=-0.25,line=0.3)#
+plot(dpixrdmn~rdrd,pch=NA,ylab="",xlab="",ylim=c(-3,40))#
+	polygon(c(rd.s,rev(rd.s)), y=c(dpxng.hpdird[1,],rev(dpxng.hpdird[2,])), col=rgb(0,0,0,alpha=0.5), border=NA)#
+	lines(dpxng.mnrd~rd.s,lwd=2)	#
+	points(dpixrdmn~rdrd,pch=16,cex=1.5)#
+	mtext(bquote("plant growth, mm"^2),side=2,line=2)#
+	mtext("road density",side=1,line=2.2) #length per area. - km / km^2#
+	mtext("b.",side=3,adj=-0.25,line=0.3)#
+plot(odrdmns~rdrd,pch=16,cex=1.5,xlab="",ylab="",ylim=c(-2.5,-1.6))#
+	polygon(c(rd.s,rev(rd.s)), y=c(odngRd.hpdis[1,],rev(odngRd.hpdis[2,])), col=rgb(0,0,0,alpha=0.5), border=NA)#
+	lines(odngRd.mns~rd.s,lwd=2)#
+	mtext("microbe growth, ln(OD)",side=2,line=2.5)##
+	mtext("road density",side=1,line=2.2)#
+	mtext("c.",side=3,adj=-0.25,line=0.3)
+pdf("~/Dropbox/salt BT round 2/dpixandOD_sigcats_rddens.pdf",width=7,height=2.5)#9.5,3#
+par(mfrow=c(1,3))#
+par(mar=c(3.5,4,1.5,0))#
+par(oma=c(0,0,0,0))#
+plot(dpix.mns~c(2,2.1,2.2,2.3,3,3.1,3.2,3.3),xaxt="n",xlab="",ylab="", cex=2, xlim=c(1.8,3.5),#
+		col = c(rgb(0,0,0),rgb(0,0,0.75),rgb(0.75,0,0),rgb(0.75,0,0.75)), pch=c(0:2,6),#
+		ylim=c(10,21))#
+	arrows(c(2,2.1,2.2,2.3,3,3.1,3.2,3.3),dpix.mns-dpix.ses,y1=dpix.mns+dpix.ses,length=0,#
+		col = c(rgb(0,0,0),rgb(0,0,0.75),rgb(0.75,0,0),rgb(0.75,0,0.75)), lwd=2)#
+	arrows(c(2,2.1,2.2,2.3), dpix.mns[1:4], x1=c(3,3.1,3.2,3.3),dpix.mns[5:8], length=0, lwd=2,#
+		col = c(rgb(0,0,0,alpha=0.5),rgb(0,0,0.75,alpha=0.5),rgb(0.75,0,0,alpha=0.5),rgb(0.75,0,0.75,alpha=0.5)),lty=2)#
+	axis(side=1, at=c(2.15,3.15),labels=c("disrupted","local"),cex.axis=1.25)#
+	mtext("microbes",side=1,line=2.2)#
+	mtext(bquote("plant growth, mm"^2),side=2,line=2)#
+	legend(1.7,22,c("Neither","1 mg/L BZT","0.8 g/L Salt","Both"), bty="n", pch=c(0:2,6),#
+		 col = c(rgb(0,0,0),rgb(0,0,0.75),rgb(0.75,0,0),rgb(0.75,0,0.75)),cex=1.25)#
+	mtext("a.",side=3,adj=-0.25,line=0.3)#
+plot(dpixrdmn~rdrd,pch=NA,ylab="",xlab="",ylim=c(-3,40))#
+	polygon(c(rd.s,rev(rd.s)), y=c(dpxng.hpdird[1,],rev(dpxng.hpdird[2,])), col=rgb(0,0,0,alpha=0.5), border=NA)#
+	lines(dpxng.mnrd~rd.s,lwd=2)	#
+	points(dpixrdmn~rdrd,pch=16,cex=1.5)#
+	mtext(bquote("plant growth, mm"^2),side=2,line=2)#
+	mtext("road density",side=1,line=2.2) #length per area. - km / km^2#
+	mtext("b.",side=3,adj=-0.25,line=0.3)#
+plot(odrdmns~rdrd,pch=16,cex=1.5,xlab="",ylab="",ylim=c(-2.5,-1.6))#
+	polygon(c(rd.s,rev(rd.s)), y=c(odngRd.hpdis[1,],rev(odngRd.hpdis[2,])), col=rgb(0,0,0,alpha=0.5), border=NA)#
+	lines(odngRd.mns~rd.s,lwd=2)#
+	mtext("microbe growth, ln(OD)",side=2,line=2.5)##
+	mtext("road density",side=1,line=2.2)#
+	mtext("c.",side=3,adj=-0.25,line=0.3)#
+dev.off()
+rm(list=ls())
