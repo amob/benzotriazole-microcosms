@@ -34,5 +34,3 @@ qiime demux summarize --i-data /outputs/Lmb_BZ17_filter.qza \
 ###based on this visualization, truncation was set at 402 (see summary table, can retain 98% of sequences with this length)
 ##read quality is good for longer, but deblur and taxonomy assignment require a fixed length of sequence across all reads
 ###TRUNCATION HAPPENS DURING DEBLUR, this number is determined here, but used in the next script.
-
-

@@ -86,6 +86,7 @@ k_values_nls$Treatment <- factor(k_values_nls$Treatment, levels = c("Abiotic Con
                                                             "Duckweed",
                                                             "Duckweed + Algae"))
 DT50_values_nls <- log(2)/k_values_nls[,2:4]
+colnames(DT50_values_nls)[1] <- "DT50"
 DT50_values_nls$Treatment <- k_values_nls$Treatment
 
 #setting up variables for predictions and figures
@@ -117,11 +118,11 @@ range((5-means[6,])/5)
 100*(5-means[6,])/5
 100*ses[6,]/5
 
-pdf("kinetics_meansSEs_preds_tmp.pdf",width=7,height=5, family="Times")
+pdf("kinetics_meansSEs_preds.pdf",width=7,height=5)
 layout(matrix(c(1,1,1,2,3,4,5,2,6:9),byrow=T,ncol=4),heights=c(1,0.4,0.4))
 par(oma=c(4,4,1.5,1))
 par(mar=c(4,0,0,1))
-plot(bzt$Concentration~bzt$Day,pch=NA,xlab="",ylab="",ylim=c(0,6.5))
+plot(bzt$Concentration~bzt$Day,pch=NA,xlab="",ylab="",ylim=c(0,6.60))
 	mtext("a.",side=3,line=0,at=-3)
 	mtext("Day",side=1,line=2.2)
 	mtext(expression("Benzotriazole "*mu*"g/L"),side=2,line=2)
@@ -131,7 +132,7 @@ plot(bzt$Concentration~bzt$Day,pch=NA,xlab="",ylab="",ylim=c(0,6.5))
 		points(means[,i]~xjitter, type="b",col=colors[i],pch=1,lwd=1.5)
 		arrows(x0=xjitter,y0=means[,i]-ses[,i],y1=means[,i]+ ses[,i],length=0,col=colors[i])
 	}
- 	legend(2,6.75,modnames, fill=colors,bty="n",ncol=2)
+  	legend(2,6.95,modnames, fill=colors,bty="n",ncol=2)
 par(mar=c(13,4.5,0,0))
 plot(k_values_nls$k_value ~ c(1:7),xaxt="n",pch=16,col=colors,ylim=c(0,0.27),ylab="",xlab="")
 	mtext("b.",side=3,line=0,at=-3)

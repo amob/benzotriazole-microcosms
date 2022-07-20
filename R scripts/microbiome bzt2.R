@@ -865,10 +865,19 @@ divdf <- data.frame(community = colnames(mastertab.s),richness=transfdivF,shanno
 mrichindex <- sapply(mixAAtrtbio$Genotype, function(z) which(divdf$community == z) )
 datrich <- data.frame(cbind(mixAAtrtbio[mixAAtrtbio$Microbes=="Yes",]), 
 					divdf[mrichindex,][mixAAtrtbio$Microbes=="Yes",])
+#even though there is more growth data observations in the treatments without benzotriazole, 
+	#the point is to compare to the relationship between total transformed BZT and microbial community richness
+	#therefore, the same slightly reduced dataset should be used. 
+	#commented out code below shows similar results including additional treatments without BZT. 
+	#results are very similar, with model for optical density becoming significant but slope very similar.
+# 	mrichindexbio <- sapply(subbio$genotype, function(z) which(divdf$community == z) )
+# 	datrichgrow <- data.frame(cbind(subbio[subbio$microbe=="+",]), 
+# 						divdf[mrichindexbio,][subbio$microbe=="+",])
+# 	datrichOD <- datrichgrow[!is.na(datrichgrow$lnOD600),]
+# 	summary(MCMCglmm(deltasqmm~richness,data=datrichgrow,nitt=100000,burnin=10000,thin=10,verbose=F)) 
+# 	summary(MCMCglmm(lnOD600~richness,data=datrichOD,nitt=100000,burnin=10000,thin=10,verbose=F)) 
 
-datrich_bytrt <- data.frame(BZTrv = c(mixAAnosaltm[1,], mixAAsaltm[1,]), 
-							transfdivS = c(transfdivS,transfdivS), transfdivF = c(transfdivF,transfdivF),
-							transfdivPD = c(transfdivPD,transfdivPD))
+
 #primary reported measure of richness
 BZTr_richness <- (MCMCglmm(conc_corrected~richness,data=datrich,nitt=100000,burnin=10000,thin=10,verbose=F)) # marginally sig pos
 summary(BZTr_richness)

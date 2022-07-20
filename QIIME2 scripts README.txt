@@ -3,7 +3,8 @@ README
 This readme covers the sequence file processing from duckweed cultured microbial communities.
 
 Use care with calling of qiime, directories, script headers. This will likely have to be edited.
-Not files are available, please see figshare, 10.6084/m9.figshare.20311758. Raw input files to sequence analysis and selected intermediate files are provided there.
+Not all files are available, please see figshare, 10.6084/m9.figshare.20311758. 
+Raw input files to sequence analysis and selected intermediate files are provided at that figshare DOI.
 gg_13_8_otus.tar.gz in the inputs folder must be unzipped before running script 03_fitNB_tax_filtertaxTabAndSeq_LmbBZ17.sh
 
 
